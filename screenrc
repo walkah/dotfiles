@@ -1,0 +1,19 @@
+# walkah's screenrc
+#
+# $Id: .screenrc,v 1.8 2007-03-30 02:31:27 walkah Exp $
+
+# no startup message
+startup_message off
+
+deflogin on
+
+# i like the caption at the bottom, so i know what screen i'm on
+caption always "%w %-= %m/%d/%y %C%a"
+
+# i use ctrl-a waay too much in emacs/readline remap to ctrl-o
+escape ^Oo
+
+# put hardstatus in the window title
+hardstatus off
+hardstatus string "%h [%n]"
+termcapinfo xterm*|ansi 'hs:ts=\E]2;:fs=\007:ds=\E]2;screen\007'
