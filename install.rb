@@ -10,6 +10,8 @@ Dir['*'].each do |file|
   unless File.exist? target
     `ln -vsf #{File.expand_path file} #{target}`
   else
-    puts "#{target} exists"
+    unless File.symlink? target
+      puts "#{target} exists"
+    end
   end
 end
