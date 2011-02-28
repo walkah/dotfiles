@@ -13,7 +13,5 @@ caption always "%w %-= %m/%d/%y %C%a"
 # i use ctrl-a waay too much in emacs/readline remap to ctrl-o
 escape ^Oo
 
-# put hardstatus in the window title
 hardstatus off
-hardstatus string "%h [%n]"
-termcapinfo xterm*|ansi 'hs:ts=\E]2;:fs=\007:ds=\E]2;screen\007'
+hardstatus string "%H:%t [%n]"
