@@ -6,7 +6,8 @@ home = File.expand_path('~')
 
 Dir['*'].each do |file|
   next if file =~ /install/ || file =~ /README/
-  target = File.join(home, ".#{file}")
+  target_name = file == 'bin' ? file : ".#{file}"
+  target = File.join(home, target_name)
   unless File.exist? target
     `ln -vsf #{File.expand_path file} #{target}`
   else
