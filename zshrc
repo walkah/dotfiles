@@ -33,4 +33,3 @@ if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
 fi
 
 export LSCOLORS="ExGxFxdxCxDxDxhbadExEx"
-export PATH="/usr/local/share/python:$PATH"
