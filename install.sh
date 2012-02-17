@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 DOTFILES=`cd $(dirname $0); pwd`
 
