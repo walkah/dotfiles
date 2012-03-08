@@ -5,8 +5,6 @@
 # no startup message
 startup_message off
 
-deflogin on
-
 # i like the caption at the bottom, so i know what screen i'm on
 caption always "%w %-= %m/%d/%y %C%a"
 
