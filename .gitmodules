@@ -1,9 +1,6 @@
 [submodule "emacs.d"]
 	path = emacs.d
 	url = https://github.com/walkah/emacs.d.git
-[submodule "oh-my-zsh"]
-	path = oh-my-zsh
-	url = https://github.com/walkah/oh-my-zsh.git
 [submodule "nvm"]
 	path = nvm
 	url = https://github.com/walkah/nvm.git

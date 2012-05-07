@@ -5,6 +5,9 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 export ZSH_THEME="walkah"
 
+# My custom directory
+export ZSH_CUSTOM=$HOME/.zsh/custom
+
 # Set to this to use case-sensitive completion
 # export CASE_SENSITIVE="true"
 
@@ -18,7 +21,18 @@ export ZSH_THEME="walkah"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git github svn ruby rails3 bundler rvm heroku pip django osx brew deb ssh-agent npm drush vagrant knife)
 
+# TODO: remove this when bug is fixed in oh-my-zsh
+# Workaround for loading theme from $ZSH_CUSTOM
+# Github issue: https://github.com/robbyrussell/oh-my-zsh/pull/1107
+MY_ZSH_THEME=$ZSH_THEME; ZSH_THEME=''
+
+# OH MY ZSH!
 source $ZSH/oh-my-zsh.sh
+
+# TODO: remove this when bug is fixed in oh-my-zsh
+# Workaround for loading theme from $ZSH_CUSTOM
+# Github issue: https://github.com/robbyrussell/oh-my-zsh/pull/1107
+source "$ZSH_CUSTOM/$MY_ZSH_THEME.zsh-theme"
 
 # Ruby / rvm
 if [ -f "$HOME/.rvm/scripts/rvm" ]; then
