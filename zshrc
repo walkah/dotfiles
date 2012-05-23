@@ -21,18 +21,8 @@ export ZSH_CUSTOM=$HOME/.zsh/custom
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git github svn ruby rails3 bundler rvm heroku pip django osx brew deb ssh-agent npm drush vagrant knife)
 
-# TODO: remove this when bug is fixed in oh-my-zsh
-# Workaround for loading theme from $ZSH_CUSTOM
-# Github issue: https://github.com/robbyrussell/oh-my-zsh/pull/1107
-MY_ZSH_THEME=$ZSH_THEME; ZSH_THEME=''
-
 # OH MY ZSH!
 source $ZSH/oh-my-zsh.sh
-
-# TODO: remove this when bug is fixed in oh-my-zsh
-# Workaround for loading theme from $ZSH_CUSTOM
-# Github issue: https://github.com/robbyrussell/oh-my-zsh/pull/1107
-source "$ZSH_CUSTOM/$MY_ZSH_THEME.zsh-theme"
 
 # Ruby / rvm
 if [ -f "$HOME/.rvm/scripts/rvm" ]; then
