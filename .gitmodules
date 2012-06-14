@@ -1,6 +1,3 @@
 [submodule "emacs.d"]
 	path = emacs.d
 	url = https://github.com/walkah/emacs.d.git
-[submodule "nvm"]
-	path = nvm
-	url = https://github.com/walkah/nvm.git
