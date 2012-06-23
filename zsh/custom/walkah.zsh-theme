@@ -3,7 +3,7 @@
 if [ -z $SSH_CONNECTION ]; then HCOLOR="green"; else HCOLOR="blue"; fi
 local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
 
-PROMPT='%{$fg[$HCOLOR]%}%m%{$reset_color%}:%C \
+PROMPT='%{$fg[$HCOLOR]%}%m%{$reset_color%}:%c \
 $(git_prompt_info)%{$fg[red]%}%(!.#.»)%{$reset_color%} '
 PROMPT2='%{$fg[red]%}\ %{$reset_color%}'
 RPS1='${return_code}'

@@ -21,6 +21,12 @@ export ZSH_CUSTOM=$HOME/.zsh/custom
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(extract git github svn ruby rails3 bundler rvm heroku pip django osx brew deb ssh-agent npm drush vagrant knife)
 
+# Python/ virtualenv
+if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
+    export WORKON_HOME=$HOME/.virtualenvs
+    plugins=($plugins virtualenvwrapper)
+fi
+
 # OH MY ZSH!
 source $ZSH/oh-my-zsh.sh
 
@@ -28,12 +34,6 @@ source $ZSH/oh-my-zsh.sh
 if [ -f "$HOME/.rvm/scripts/rvm" ]; then
   source "$HOME/.rvm/scripts/rvm"
   rvm 1.9.3
-fi
-
-# Python/ virtualenv
-if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
-    export WORKON_HOME=$HOME/.virtualenvs
-    source /usr/local/bin/virtualenvwrapper.sh
 fi
 
 # Node / nvm
