@@ -33,7 +33,7 @@ source $ZSH/oh-my-zsh.sh
 # Ruby / rvm
 if [ -f "$HOME/.rvm/scripts/rvm" ]; then
   source "$HOME/.rvm/scripts/rvm"
-  rvm 1.9.3
+  rvm 1.9.3@global
 fi
 
 # Node / nvm
