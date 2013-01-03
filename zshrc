@@ -41,4 +41,9 @@ if [ -f "$HOME/.nvm/nvm.sh" ]; then
   source "$HOME/.nvm/nvm.sh"
 fi
 
+# phpbrew
+if [ -f "$HOME/.phpbrew/bashrc" ]; then
+  source "$HOME/.phpbrew/bashrc"
+fi
+
 export LSCOLORS="ExGxFxdxCxDxDxhbadExEx"
