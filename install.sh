@@ -5,6 +5,11 @@ if [ ! -d ~/.oh-my-zsh ]; then
     git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 fi
 
+# Install emacs.d
+if [ ! -d ~/.emacs.d ]; then
+    git clone https://github.com/walkah/emacs.d.git ~/.emacs.d
+fi
+
 DOTFILES=`cd $(dirname $0); pwd`
 
 for FILE in $DOTFILES/*; do
