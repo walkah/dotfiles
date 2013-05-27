@@ -1,3 +1,4 @@
 environment*
 id_dsa
 known_hosts
+*.pem
