@@ -10,6 +10,9 @@ notify()
     fi
 }
 
+# Avoid spawning script twice.
+ps aux | grep ircnotify.sh | grep -v grep | grep -v $$ && exit
+
 (ssh irc.walkah.net -o PermitLocalCommand=no \
     ": > .irssi/fnotify ; tail -f .irssi/fnotify " | \
     while read heading message; do \
