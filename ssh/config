@@ -1,6 +1,9 @@
 GatewayPorts yes
 HashKnownHosts no
 
+Host *
+ ForwardAgent yes
+
 Host irc.walkah.net
   Hostname irc.walkah.net
   LocalCommand ~/bin/ircnotify.sh
