@@ -30,12 +30,6 @@ fi
 # OH MY ZSH!
 source $ZSH/oh-my-zsh.sh
 
-# Ruby / rvm
-if [ -f "$HOME/.rvm/scripts/rvm" ]; then
-  source "$HOME/.rvm/scripts/rvm"
-  rvm 1.9.3
-fi
-
 # Node / nvm
 if [ -f "$HOME/.nvm/nvm.sh" ]; then
   source "$HOME/.nvm/nvm.sh"
@@ -44,6 +38,12 @@ fi
 # phpbrew
 if [ -f "$HOME/.phpbrew/bashrc" ]; then
   source "$HOME/.phpbrew/bashrc"
+fi
+
+# Ruby / rvm
+if [ -f "$HOME/.rvm/scripts/rvm" ]; then
+  source "$HOME/.rvm/scripts/rvm"
+  rvm 2.0.0
 fi
 
 export LSCOLORS="ExGxFxdxCxDxDxhbadExEx"
