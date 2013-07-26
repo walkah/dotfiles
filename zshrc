@@ -46,6 +46,8 @@ if [ -f "$HOME/.rvm/scripts/rvm" ]; then
   rvm 2.0.0
 fi
 
-export DISABLE_AUTO_TITLE="true"
+if [ $TERM = "screen" ]; then
+  export DISABLE_AUTO_TITLE="true"
+fi 
 export EDITOR="vim"
 export LSCOLORS="ExGxFxdxCxDxDxhbadExEx"
