@@ -19,7 +19,7 @@ export ZSH_CUSTOM=$HOME/.zsh/custom
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(extract tmux tmuxinator git github git-flow svn ruby rails3 bundler rvm heroku pip django fabric osx brew deb ssh-agent npm drush composer symfony2 vagrant knife)
+plugins=(extract tmux tmuxinator git github git-flow svn ruby rails3 bundler rbenv heroku pip django fabric osx brew deb ssh-agent npm drush composer symfony2 vagrant knife)
 
 # Python/ virtualenv
 if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
@@ -38,12 +38,6 @@ fi
 # phpbrew
 if [ -f "$HOME/.phpbrew/bashrc" ]; then
   source "$HOME/.phpbrew/bashrc"
-fi
-
-# Ruby / rvm
-if [ -f "$HOME/.rvm/scripts/rvm" ]; then
-  source "$HOME/.rvm/scripts/rvm"
-  rvm 2.0.0
 fi
 
 if [ $TERM = "screen" ]; then
