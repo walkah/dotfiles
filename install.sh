@@ -10,17 +10,13 @@ if [ ! -d ~/.emacs.d ]; then
     git clone https://github.com/walkah/emacs.d.git ~/.emacs.d
 fi
 
-DOTFILES=`cd $(dirname $0); pwd`
+DOTFILES=`cd $(dirname $0)/home; pwd`
 
-for FILE in $DOTFILES/*; do
+for FILE in `ls -a $DOTFILES`; do
     NAME=`basename $FILE`
-    if [ $NAME == 'bin' ]; then
-        TARGET=$HOME/bin
-    else
-        TARGET=$HOME/.$NAME
-    fi
+    TARGET=$HOME/$NAME
 
-    if [ $NAME != 'install.sh' ]; then
+    if [ $NAME != '.' ] && [ $NAME != '..' ]; then
         if [ -L $TARGET ]; then
             echo "$TARGET exists"
         else
