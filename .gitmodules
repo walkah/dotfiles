@@ -1,0 +1,3 @@
+[submodule "home/.emacs.d"]
+	path = home/.emacs.d
+	url = git@github.com:walkah/emacs.d.git
