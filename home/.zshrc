@@ -19,7 +19,7 @@ export ZSH_CUSTOM=$HOME/.zsh/custom
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(extract tmux tmuxinator git github git-flow svn ruby gem rbenv rails3 bundler heroku pip django fabric osx brew deb ssh-agent npm drush composer symfony2 vagrant knife)
+plugins=(extract tmux tmuxinator git github git-flow svn ruby gem rbenv rails3 bundler heroku pip django fabric osx brew deb ssh-agent npm nvm drush composer symfony2 vagrant knife)
 
 # Python/ virtualenv
 if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
@@ -29,11 +29,6 @@ fi
 
 # OH MY ZSH!
 source $ZSH/oh-my-zsh.sh
-
-# Node / nvm
-if [ -f "$HOME/.nvm/nvm.sh" ]; then
-  source "$HOME/.nvm/nvm.sh"
-fi
 
 # phpbrew
 if [ -f "$HOME/.phpbrew/bashrc" ]; then
