@@ -13,4 +13,3 @@ export CVS_RSH=ssh
 #export CVSROOT=/home/cvs
 
 [ -f $HOME/.environment ] && . $HOME/.environment
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
