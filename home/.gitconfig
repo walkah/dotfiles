@@ -12,3 +12,6 @@
 	smu = submodule update --init --recursive
 [github]
 	user = walkah
+[git-up "bundler"]
+	check = true
+	autoinstall = true
