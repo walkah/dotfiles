@@ -19,7 +19,7 @@ export ZSH_CUSTOM=$HOME/.zsh/custom
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(extract cask tmux tmuxinator git github git-flow ruby gem rvm rails bundler heroku ssh-agent bower npm nvm golang drush composer symfony2 vagrant knife)
+plugins=(extract cask tmux tmuxinator git github git-flow ruby gem rvm rails bundler heroku ssh-agent npm nvm golang drush composer symfony2 vagrant knife)
 
 # Python/ virtualenv
 if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
@@ -42,6 +42,8 @@ case "$OSTYPE" in
         ;;
 esac
 
+UNBUNDLED_COMMANDS=(knife)
+
 # OH MY ZSH!
 source $ZSH/oh-my-zsh.sh
 
@@ -55,5 +57,3 @@ if [ $TERM = "screen" ]; then
 fi 
 export EDITOR="vim"
 export LSCOLORS="ExGxFxdxCxDxDxhbadExEx"
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
