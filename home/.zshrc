@@ -27,11 +27,6 @@ if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
     plugins=($plugins virtualenvwrapper pip django fabric)
 fi
 
-# AWS CLI
-if [ -f /usr/local/bin/aws_zsh_completer.sh ]; then
-    plugins=($plugins aws)
-fi
-
 # Platform specific settings
 case "$OSTYPE" in 
     darwin*)
@@ -50,6 +45,11 @@ source $ZSH/oh-my-zsh.sh
 # phpbrew
 if [ -f "$HOME/.phpbrew/bashrc" ]; then
   source "$HOME/.phpbrew/bashrc"
+fi
+
+# AWS CLI
+if [ -f /usr/local/bin/aws_zsh_completer.sh ]; then
+    source /usr/local/bin/aws_zsh_completer.sh
 fi
 
 if [ $TERM = "screen" ]; then
