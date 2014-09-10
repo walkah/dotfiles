@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # system setup
-chef-client
+sudo chef-client
 rvm gemset reset_env # rvm cookbook breaks this
 brew upgrade 
 brew cleanup
