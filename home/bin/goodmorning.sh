@@ -7,4 +7,5 @@ brew upgrade
 brew cleanup
 for cask in $(brew cask list); do brew cask install $cask; done
 brew cask cleanup
-
+# updates from the app store
+softwareupdate -i -a
