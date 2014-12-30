@@ -7,11 +7,11 @@ for box in $(vagrant global-status|grep running|awk '{ print $1 }'); do vagrant 
 tmux kill-server
 
 # quit apps
-osascript -e 'tell application "emacs" to quit'
-osascript -e 'tell application "textual 5" to quit'
-osascript -e 'tell application "adium" to quit'
-osascript -e 'tell application "flowdock" to quit'
-osascript -e 'tell application "skype" to quit'
-osascript -e 'tell application "slack" to quit'
+osascript -e 'quit app "emacs"'
+osascript -e 'quit app "textual 5"'
+osascript -e 'quit app "adium"'
+osascript -e 'quit app "flowdock"'
+osascript -e 'quit app "skype"'
+osascript -e 'quit app "slack"'
 
 uncommitted ~/Projects ~/.homesick
