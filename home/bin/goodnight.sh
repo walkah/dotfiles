@@ -13,7 +13,7 @@ osascript -e 'quit app "adium"'
 osascript -e 'quit app "flowdock"'
 osascript -e 'quit app "skype"'
 osascript -e 'quit app "slack"'
-osascript -e 'quit app "github"'
+osascript -e 'quit app "github desktop"'
 osascript -e 'quit app "atom"'
 
 uncommitted ~/Projects ~/.homesick
