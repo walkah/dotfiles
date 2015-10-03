@@ -6,9 +6,6 @@ sudo chef-client
 brew upgrade --all
 for i in $(brew cask list); do brew cask install $i; done
 brew cleanup
-# atom updates
-apm stars --install
-apm upgrade --no-confirm
 
 # updates from the app store
 softwareupdate -i -a
