@@ -19,7 +19,7 @@ export ZSH_CUSTOM=$HOME/.zsh/custom
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(extract tmux tmuxinator timetrap git github git-flow ruby gem rvm rails bundler heroku ssh-agent npm nvm golang drush composer symfony2 vagrant knife)
+plugins=(extract tmux tmuxinator timetrap git github git-flow ruby gem rvm rails bundler heroku ssh-agent npm nvm golang drush composer symfony2 vagrant knife docker docker-compose)
 
 # Python/ virtualenv
 if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
@@ -28,7 +28,7 @@ if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
 fi
 
 # Platform specific settings
-case "$OSTYPE" in 
+case "$OSTYPE" in
     darwin*)
         plugins=($plugins brew brew-cask osx)
         ;;
@@ -54,6 +54,6 @@ fi
 
 if [ $TERM = "screen" ]; then
   export DISABLE_AUTO_TITLE="true"
-fi 
+fi
 export EDITOR="vim"
 export LSCOLORS="ExGxFxdxCxDxDxhbadExEx"
