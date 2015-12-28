@@ -8,11 +8,6 @@ tmux kill-server
 
 # quit apps
 osascript -e 'quit app "emacs"'
-osascript -e 'quit app "textual 5"'
-osascript -e 'quit app "adium"'
-osascript -e 'quit app "flowdock"'
-osascript -e 'quit app "skype"'
-osascript -e 'quit app "slack"'
 osascript -e 'quit app "github desktop"'
 osascript -e 'quit app "atom"'
 
