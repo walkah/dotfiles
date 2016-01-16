@@ -3,6 +3,9 @@
 # shutdown vagrant boxes
 for box in $(vagrant global-status|grep running|awk '{ print $1 }'); do vagrant halt $box; done
 
+# shutdown docker machines
+for machine in $(docker-machine ls -q); do docker-machine stop $machine; done
+
 # kill tmux sessions
 tmux kill-server
 
