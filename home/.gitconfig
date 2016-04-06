@@ -1,6 +1,7 @@
 [user]
 	name = James Walker
 	email = walkah@walkah.net
+	signingkey = 4D47A81C
 [color]
 	diff = auto
 	status = auto
