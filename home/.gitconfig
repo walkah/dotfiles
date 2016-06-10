@@ -12,6 +12,7 @@
   st = status -s
 	smu = submodule update --init --recursive
 	ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
+	up = !git fetch && git rebase --autostash FETCH_HEAD
 [github]
 	user = walkah
 [git-up "bundler"]
