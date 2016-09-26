@@ -15,4 +15,5 @@ osascript -e 'quit app "emacs"'
 osascript -e 'quit app "github desktop"'
 osascript -e 'quit app "atom"'
 
-uncommitted ~/Projects ~/.homesick
+# report repo status
+mr -m status

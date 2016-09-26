@@ -2,11 +2,13 @@
 
 # system setup
 sudo chef-client
-# rvm gemset reset_env # rvm cookbook breaks this
+
+# upgrade homebrew
 brew upgrade --all
-for i in $(brew cask list); do brew cask install $i; done
 brew cleanup
-brew cask cleanup
+
+# update all repositories
+mr -j 5 update
 
 # updates from the app store
 mas upgrade
