@@ -11,7 +11,7 @@ ZSH_THEME_NVM_PROMPT_SUFFIX=")"
 PROMPT='%{$fg[$HCOLOR]%}%m%{$reset_color%}:%c \
 $(git_prompt_info)%{$fg[red]%}%(!.#.»)%{$reset_color%} '
 PROMPT2='%{$fg[red]%}\ %{$reset_color%}'
-RPS1='%{$fg[cyan]%}$(ruby_prompt_info)node-$(nvm_prompt_info) %{$reset_color%}${return_code}'
+RPS1='%{$fg[cyan]%}(ruby-$(ruby_prompt_info)/node-$(nvm_prompt_info) %{$reset_color%}${return_code}'
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[green]%}±%{$fg[yellow]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} "
