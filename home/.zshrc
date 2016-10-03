@@ -42,14 +42,15 @@ UNBUNDLED_COMMANDS=(knife)
 # OH MY ZSH!
 source $ZSH/oh-my-zsh.sh
 
-# phpbrew
-if [ -f "$HOME/.phpbrew/bashrc" ]; then
-  source "$HOME/.phpbrew/bashrc"
-fi
-
 # AWS CLI
 if [ -f /usr/local/bin/aws_zsh_completer.sh ]; then
     source /usr/local/bin/aws_zsh_completer.sh
+fi
+
+# gcloud 
+if [ -d /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk ]; then
+  source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
+  source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
 fi
 
 if [ $TERM = "screen" ]; then
