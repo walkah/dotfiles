@@ -23,6 +23,7 @@ plugins=(extract command-not-found tmux tmuxinator git github git-flow ssh-agent
 
 # ruby
 plugins=($plugins ruby gem rbenv rails bundler heroku)
+export RBENV_ROOT=$HOME/.rbenv
 
 # node
 plugins=($plugins nvm npm yarn)
@@ -47,6 +48,7 @@ UNBUNDLED_COMMANDS=(knife)
 
 # nvm from homebrew
 if [ -f /usr/local/opt/nvm/nvm.sh ]; then
+  export NVM_DIR=$HOME/.nvm
   source /usr/local/opt/nvm/nvm.sh
 fi
 
