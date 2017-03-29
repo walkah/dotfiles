@@ -14,6 +14,10 @@ mackup restore
 brew bundle --global
 brew upgrade
 brew cleanup
+brew cask cleanup
+
+# update gems
+gem update
 
 # update all repositories
 mr -j 5 update
