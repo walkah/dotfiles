@@ -19,13 +19,19 @@ export ZSH_CUSTOM=$HOME/.zsh/custom
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(extract command-not-found tmux tmuxinator git github git-flow ruby gem rvm rails bundler heroku ssh-agent npm nvm yarn pyenv golang drush composer vagrant knife docker docker-compose mix mix-fast)
+plugins=(extract command-not-found tmux tmuxinator git github git-flow ssh-agent golang vagrant knife docker docker-compose mix mix-fast)
 
-# Python/ virtualenv
-if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
-    export WORKON_HOME=$HOME/.virtualenvs
-    plugins=($plugins virtualenvwrapper pip django fabric)
-fi
+# ruby
+plugins=($plugins ruby gem rbenv rails bundler heroku)
+
+# node
+plugins=($plugins nvm npm yarn)
+
+# python
+plugins=($plugins pyenv pip)
+
+# php / drupal
+plugins=($plugins drush composer)
 
 # Platform specific settings
 case "$OSTYPE" in
@@ -38,6 +44,11 @@ case "$OSTYPE" in
 esac
 
 UNBUNDLED_COMMANDS=(knife)
+
+# nvm from homebrew
+if [ -f /usr/local/opt/nvm/nvm.sh ]; then
+  source /usr/local/opt/nvm/nvm.sh
+fi
 
 # OH MY ZSH!
 source $ZSH/oh-my-zsh.sh
@@ -59,5 +70,3 @@ if [ $TERM = "screen" ]; then
 fi
 export EDITOR="vim"
 export LSCOLORS="ExGxFxdxCxDxDxhbadExEx"
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
