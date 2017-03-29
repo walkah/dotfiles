@@ -1,6 +1,9 @@
 # ~/.Brewfile
 cask_args appdir: '/Applications'
+# taps
+tap 'homebrew/php'
 # brews
+brew 'composer'
 brew 'dnsmasq'
 brew 'docker-cloud'
 brew 'drush'
@@ -13,8 +16,8 @@ brew 'htop'
 brew 'mackup'
 brew 'mas'
 brew 'mongodb'
+brew 'mr'
 brew 'mtr'
-brew 'myrepos'
 brew 'openssl'
 brew 'postgresql'
 brew 'pwgen'
@@ -25,6 +28,7 @@ brew 'wget'
 # casks
 cask 'adobe-creative-cloud'
 cask 'alfred'
+cask 'atom'
 cask 'chefdk'
 cask 'dash'
 cask 'docker'
