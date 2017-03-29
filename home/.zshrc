@@ -19,7 +19,7 @@ export ZSH_CUSTOM=$HOME/.zsh/custom
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(extract command-not-found tmux tmuxinator timetrap git github git-flow ruby gem rbenv rails bundler heroku ssh-agent npm nvm golang drush composer symfony2 vagrant knife docker docker-compose mix mix-fast)
+plugins=(extract command-not-found tmux tmuxinator git github git-flow ruby gem rvm rails bundler heroku ssh-agent npm nvm yarn pyenv golang drush composer vagrant knife docker docker-compose mix mix-fast)
 
 # Python/ virtualenv
 if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
@@ -47,10 +47,11 @@ if [ -f /usr/local/bin/aws_zsh_completer.sh ]; then
     source /usr/local/bin/aws_zsh_completer.sh
 fi
 
-# gcloud 
+# gcloud
 if [ -d /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk ]; then
   source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
   source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
+  source <(kubectl completion zsh)
 fi
 
 if [ $TERM = "screen" ]; then
@@ -58,3 +59,5 @@ if [ $TERM = "screen" ]; then
 fi
 export EDITOR="vim"
 export LSCOLORS="ExGxFxdxCxDxDxhbadExEx"
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
