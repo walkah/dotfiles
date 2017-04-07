@@ -1,3 +1,4 @@
 .ssh
 .chef
 .rbenv
+.nodenv

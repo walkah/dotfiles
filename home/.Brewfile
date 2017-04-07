@@ -2,6 +2,7 @@
 cask_args appdir: '/Applications'
 # taps
 tap 'homebrew/php'
+tap 'nodenv/nodenv'
 cask 'java'
 # brews
 brew 'composer'
@@ -19,7 +20,8 @@ brew 'mas'
 brew 'mongodb'
 brew 'mr'
 brew 'mtr'
-brew 'nvm'
+brew 'nodenv'
+brew 'nodenv-default-packages'
 brew 'openssl'
 brew 'php-code-sniffer'
 brew 'postgresql'
@@ -77,7 +79,6 @@ mas 'Noizio', id: 928871589
 mas 'Pages', id: 409201541
 mas 'Pocket', id: 568494494
 mas 'Simplify', id: 448003584
-mas 'Spark', id: 1176895641
 mas 'Todoist', id: 585829637
 mas 'Twitter', id: 409789998
 mas 'Xcode', id: 497799835

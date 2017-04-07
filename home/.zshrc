@@ -26,7 +26,8 @@ plugins=($plugins ruby gem rbenv rails bundler heroku)
 export RBENV_ROOT=$HOME/.rbenv
 
 # node
-plugins=($plugins nvm npm yarn)
+plugins=($plugins npm yarn)
+eval "$(nodenv init -)"
 
 # python
 plugins=($plugins pyenv pip)
@@ -45,12 +46,6 @@ case "$OSTYPE" in
 esac
 
 UNBUNDLED_COMMANDS=(knife)
-
-# nvm from homebrew
-if [ -f /usr/local/opt/nvm/nvm.sh ]; then
-  export NVM_DIR=$HOME/.nvm
-  source /usr/local/opt/nvm/nvm.sh
-fi
 
 # OH MY ZSH!
 source $ZSH/oh-my-zsh.sh
