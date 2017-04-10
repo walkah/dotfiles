@@ -26,11 +26,12 @@ plugins=($plugins ruby gem rbenv rails bundler heroku)
 export RBENV_ROOT=$HOME/.rbenv
 
 # node
-plugins=($plugins npm yarn)
-eval "$(nodenv init -)"
+plugins=($plugins nodenv npm yarn)
+export NODENV_ROOT=$HOME/.nodenv
 
 # python
 plugins=($plugins pyenv pip)
+export PYENV_ROOT=$HOME/.pyenv
 
 # php / drupal
 plugins=($plugins drush composer)
