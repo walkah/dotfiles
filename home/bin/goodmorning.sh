@@ -21,3 +21,9 @@ gem update
 
 # update all repositories
 mr -j 5 update
+
+# upgrade atom packages
+apm upgrade --no-confirm
+
+# upgrade app store apps
+mas upgrade
