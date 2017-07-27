@@ -2,6 +2,7 @@
 cask_args appdir: '/Applications'
 # taps
 tap 'homebrew/php'
+tap 'jawshooah/pyenv'
 tap 'nodenv/nodenv'
 cask 'java'
 # brews
@@ -27,6 +28,7 @@ brew 'php-code-sniffer'
 brew 'postgresql'
 brew 'pwgen'
 brew 'pyenv'
+brew "pyenv-default-packages", args: ["HEAD"]
 brew 'rbenv'
 brew 'rbenv-default-gems'
 brew 'reattach-to-user-namespace'
