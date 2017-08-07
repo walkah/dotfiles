@@ -11,9 +11,10 @@ for container in $(docker ps -a -q); do docker stop $container; done
 tmux kill-server
 
 # quit apps
-osascript -e 'quit app "emacs"'
-osascript -e 'quit app "github desktop"'
 osascript -e 'quit app "atom"'
+
+# stop services
+brew services stop --all
 
 # report repo status
 mr -m status
