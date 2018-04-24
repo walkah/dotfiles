@@ -6,10 +6,10 @@ tap 'jawshooah/pyenv'
 tap 'nodenv/nodenv'
 cask 'java'
 # brews
+brew 'autojump'
 brew 'composer'
 brew 'dnsmasq'
 brew 'docker-cloud'
-brew 'drush'
 brew 'elixir'
 brew 'gist'
 brew 'git'
@@ -84,5 +84,5 @@ mas 'Pages', id: 409201541
 mas 'Pocket', id: 568494494
 mas 'Simplify', id: 448003584
 mas 'Todoist', id: 585829637
-mas 'Twitter', id: 409789998
+mas 'Tweetbot', id: 557168941
 mas 'Xcode', id: 497799835
