@@ -84,5 +84,5 @@ mas 'Pages', id: 409201541
 mas 'Pocket', id: 568494494
 mas 'Simplify', id: 448003584
 mas 'Todoist', id: 585829637
-mas 'Tweetbot', id: 557168941
+mas 'Tweetbot', id: 1384080005
 mas 'Xcode', id: 497799835
