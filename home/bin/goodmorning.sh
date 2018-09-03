@@ -14,7 +14,6 @@ mackup restore
 brew bundle --global
 brew upgrade
 brew cleanup
-brew cask cleanup
 
 # update ruby + gems
 LATEST_RUBY=$(rbenv install -l | grep -v - | awk '{print $1}'| tail -1)
