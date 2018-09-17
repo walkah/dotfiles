@@ -81,7 +81,7 @@ cask 'virtualbox'
 mas 'Day One', id: 1055511498
 mas 'Deliveries', id: 924726344
 mas 'Keynote', id: 409183694
-mas 'Noizio', id: 928871589
+mas 'Notability', id: 736189492
 mas 'Pages', id: 409201541
 mas 'Pocket', id: 568494494
 mas 'Simplify', id: 448003584
