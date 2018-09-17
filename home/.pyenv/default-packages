@@ -1,1 +1,4 @@
 azure-cli
+flake8
+pytest
+pytest-cache
