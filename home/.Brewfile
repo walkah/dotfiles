@@ -7,12 +7,12 @@ tap 'nodenv/nodenv'
 cask 'java'
 # brews
 brew 'autojump'
+brew 'awscli'
 brew 'composer'
 brew 'dnsmasq'
-brew 'docker-cloud'
 brew 'elixir'
 brew 'exercism'
-brew 'gist'
+brew 'flake8'
 brew 'git'
 brew 'gsl'
 brew 'heroku'
@@ -41,31 +41,33 @@ brew 'wget'
 cask '1password'
 cask 'adobe-creative-cloud'
 cask 'alfred'
+cask 'android-studio'
 cask 'atom'
 cask 'authy-desktop'
 cask 'backblaze'
+cask 'brave'
 cask 'chefdk'
 cask 'choosy'
 cask 'dash'
 cask 'docker'
 cask 'dropbox'
+cask 'fantastical'
 cask 'firefox'
 cask 'font-hack'
 cask 'font-inconsolata'
-cask 'font-hack'
 cask 'google-backup-and-sync'
 cask 'google-chrome'
+cask 'google-cloud-sdk'
 cask 'google-hangouts'
 cask 'gpgtools'
 cask 'hazel'
 cask 'istat-menus'
 cask 'iterm2'
-cask 'java'
 cask 'keybase'
 cask 'microsoft-office'
 cask 'mongohub'
 cask 'ngrok'
-cask 'nvalt'
+cask 'postman'
 cask 'rescuetime'
 cask 'sequel-pro'
 cask 'sketch'
@@ -73,18 +75,22 @@ cask 'skype'
 cask 'slack'
 cask 'sonos'
 cask 'spotify'
+cask 'station'
 cask 'steam'
 cask 'synology-cloud-station-drive'
 cask 'vagrant'
 cask 'virtualbox'
+cask 'virtualbox-extension-pack'
 # mac app store
+mas 'Cyberduck', id: 409222199
 mas 'Day One', id: 1055511498
 mas 'Deliveries', id: 924726344
 mas 'Keynote', id: 409183694
 mas 'Notability', id: 736189492
 mas 'Pages', id: 409201541
 mas 'Pocket', id: 568494494
+mas 'Reeder', id: 880001334
 mas 'Simplify', id: 448003584
 mas 'Todoist', id: 585829637
-mas 'Tweetbot', id: 1384080005
+mas 'UlyssesMac', id: 1225570693
 mas 'Xcode', id: 497799835
