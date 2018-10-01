@@ -39,7 +39,7 @@ plugins=($plugins drush composer)
 # Platform specific settings
 case "$OSTYPE" in
     darwin*)
-        plugins=($plugins brew brew-cask osx)
+        plugins=($plugins osx)
         ;;
     linux*)
         plugins=($plugins deb)
