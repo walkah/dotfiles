@@ -1,26 +1,19 @@
 #!/bin/bash
 
-# Install oh-my-zsh
-if [ ! -d ~/.oh-my-zsh ]; then
-    git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
-fi
+echo "Installing xcode commandline tools..."
+xcode-select --install
+# Mojave fix
+sudo installer -pkg /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg -target /
 
-# Install emacs.d
-if [ ! -d ~/.emacs.d ]; then
-    git clone https://github.com/walkah/emacs.d.git ~/.emacs.d
-fi
+echo "Installing homebrew..."
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-DOTFILES=`cd $(dirname $0)/home; pwd`
+echo "Installing oh-my-zsh..."
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-for FILE in `ls -a $DOTFILES`; do
-    NAME=`basename $FILE`
-    TARGET=$HOME/$NAME
+echo "Installing homesick..."
+sudo gem install homesick
+homesick clone git@github.com:walkah/dotfiles.git
 
-    if [ $NAME != '.' ] && [ $NAME != '..' ]; then
-        if [ -L $TARGET ]; then
-            echo "$TARGET exists"
-        else
-            ln -vsf $FILE $TARGET
-        fi
-    fi
-done
+echo "Initial brew bundle..."
+brew bundle --global
