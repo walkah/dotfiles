@@ -1,6 +1,8 @@
 bundler
+cocoapods
 jekyll
 homesick
 rails
+rubocop
 tmuxinator
 travis
