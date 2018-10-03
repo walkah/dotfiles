@@ -40,8 +40,5 @@ fi
 # update all repositories
 mr -j 5 update
 
-# install atom packages
-apm stars --install
-
 # upgrade app store apps
 mas upgrade
