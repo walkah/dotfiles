@@ -45,7 +45,6 @@ cask '1password'
 cask 'adobe-creative-cloud'
 cask 'alfred'
 cask 'android-studio'
-cask 'atom'
 cask 'authy'
 cask 'backblaze'
 cask 'brave'
@@ -82,6 +81,7 @@ cask 'synology-drive'
 cask 'vagrant'
 cask 'virtualbox'
 cask 'virtualbox-extension-pack'
+cask 'visual-studio-code'
 # mac app store
 mas 'Cyberduck', id: 409222199
 mas 'Day One', id: 1055511498
