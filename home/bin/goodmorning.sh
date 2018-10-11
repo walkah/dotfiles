@@ -24,7 +24,7 @@ fi
 gem update
 
 # update latest node
-LATEST_NODE=$(nodenv install -l |grep -v - |awk '{print $1}'|egrep '[0-9]+\.\d*[0-9]\.[0-9]+'|sort -n|tail -1)
+LATEST_NODE=$(nodenv install -l |grep -v - |awk '{print $1}'|egrep '[0-9]+\.[0-9]+\.[0-9]+'|sort -V|tail -1)
 if [ $LATEST_NODE != $(nodenv global) ]; then
   nodenv install $LATEST_NODE
   nodenv global $LATEST_NODE
