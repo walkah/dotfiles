@@ -94,5 +94,6 @@ mas 'Pocket', id: 568494494
 mas 'Reeder', id: 880001334
 mas 'Simplify', id: 448003584
 mas 'Todoist', id: 585829637
+mas 'Tweetbot', id: 1384080005
 mas 'UlyssesMac', id: 1225570693
 mas 'Xcode', id: 497799835
