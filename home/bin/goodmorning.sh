@@ -15,27 +15,10 @@ brew bundle --global
 brew upgrade
 brew cleanup
 
-# update ruby + gems
-LATEST_RUBY=$(rbenv install -l | grep -v - | awk '{print $1}'| tail -1)
-if [ $LATEST_RUBY != $(rbenv global) ]; then
-  rbenv install $LATEST_RUBY
-  rbenv global $LATEST_RUBY
-fi
-gem update
-
-# update latest node
-LATEST_NODE=$(nodenv install -l |grep -v - |awk '{print $1}'|egrep '[0-9]+\.[0-9]+\.[0-9]+'|sort -V|tail -1)
-if [ $LATEST_NODE != $(nodenv global) ]; then
-  nodenv install $LATEST_NODE
-  nodenv global $LATEST_NODE
-fi
-
-# update python
-LATEST_PYTHON=$(pyenv install -l | grep -v - | awk '{print $1}'|egrep '^2'| tail -1)
-if [ $LATEST_PYTHON != $(pyenv global) ]; then
-  pyenv install $LATEST_PYTHON
-  pyenv global $LATEST_PYTHON
-fi
+# asdf 
+asdf update
+asdf plugin-update --all
+asdf install
 
 # update all repositories
 mr -j 5 update

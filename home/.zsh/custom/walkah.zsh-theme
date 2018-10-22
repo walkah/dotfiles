@@ -3,9 +3,13 @@
 if [ -z $SSH_CONNECTION ]; then HCOLOR="green"; else HCOLOR="blue"; fi
 local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
 
+function asdf_prompt() {
+  echo $(asdf current $1|awk '{print $1}')
+}
+
 PROMPT='%{$fg[$HCOLOR]%}%m%{$reset_color%}:%c $(git_prompt_info)%{$fg[red]%}%(!.#.»)%{$reset_color%} '
 PROMPT2='%{$fg[red]%}\ %{$reset_color%}'
-RPS1='%{$fg[cyan]%}(%{$fg[red]%}$(ruby_prompt_info) %{$fg[green]%}$(nodenv_prompt_info) %{$fg[blue]%}$(pyenv_prompt_info)%{$fg[cyan]%}) %{$reset_color%}${return_code}'
+RPS1='%{$fg[cyan]%}(%{$fg[red]%}$(asdf_prompt ruby) %{$fg[green]%}$(asdf_prompt nodejs) %{$fg[blue]%}$(asdf_prompt python)%{$fg[cyan]%}) %{$reset_color%}${return_code}'
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[green]%}±%{$fg[yellow]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} "
