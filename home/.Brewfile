@@ -7,7 +7,6 @@ tap 'jawshooah/pyenv'
 tap 'nodenv/nodenv'
 cask 'java'
 # brews
-brew 'asdf'
 brew 'autojump'
 brew 'awscli'
 brew 'dnsmasq'
