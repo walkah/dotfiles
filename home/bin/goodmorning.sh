@@ -1,27 +1,28 @@
 #!/bin/sh
 
-# system setup
-# sudo chef-client
-
-# homesick
+echo "* Updating homesick..."
 homesick pull
 homesick symlink
 
-# mackup
+echo "* Restoring mackup..."
 mackup restore
 
-# upgrade homebrew
+echo "* Homebrew updates..."
 brew bundle --global
 brew upgrade
 brew cleanup
 
-# asdf 
+echo "* Upgrading mac app store apps..."
+mas upgrade
+
+echo "* asdf update..."
 asdf update
 asdf plugin-update --all
 asdf install
 
-# update all repositories
+echo "* Syncing repositories..."
 mr -j 5 update
 
-# upgrade app store apps
-mas upgrade
+echo "* Upgrading oh-my-zsh..."
+cd ~/.oh-my-zsh
+git pull --rebase --stat origin master
