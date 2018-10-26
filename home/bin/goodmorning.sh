@@ -1,5 +1,11 @@
 #!/bin/sh
 
+function install_latest() {
+  version=$(asdf list-all $1 | grep -v - | tail -1)
+  asdf install $1 $version 
+  asdf global $1 $version
+}
+
 echo "* Updating homesick..."
 homesick pull
 homesick symlink
@@ -16,9 +22,11 @@ echo "* Upgrading mac app store apps..."
 mas upgrade
 
 echo "* asdf update..."
+for plugin in $(cat ~/.tool-versions | awk '{print $1}'); do asdf plugin-add $plugin; done
 asdf update
 asdf plugin-update --all
 asdf install
+for plugin in $(cat ~/.tool-versions | awk '{print $1}'); do install_latest $plugin; done
 
 echo "* Syncing repositories..."
 mr -j 5 update
