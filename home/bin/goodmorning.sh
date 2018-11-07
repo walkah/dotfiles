@@ -22,6 +22,7 @@ echo "* Upgrading mac app store apps..."
 mas upgrade
 
 echo "* asdf update..."
+export R_CONFIGURE_OPTIONS="--with-x=no"
 for plugin in $(cat ~/.tool-versions | awk '{print $1}'); do asdf plugin-add $plugin; done
 asdf update
 asdf plugin-update --all
