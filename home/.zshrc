@@ -50,14 +50,7 @@ source $ZSH/oh-my-zsh.sh
 
 # AWS CLI
 if [ -f /usr/local/bin/aws_zsh_completer.sh ]; then
-    source /usr/local/bin/aws_zsh_completer.sh
-fi
-
-# gcloud
-if [ -d /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk ]; then
-  source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
-  source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
-  source <(kubectl completion zsh)
+  source /usr/local/bin/aws_zsh_completer.sh
 fi
 
 if [ $TERM = "screen" ]; then
