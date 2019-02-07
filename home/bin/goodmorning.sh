@@ -16,7 +16,6 @@ mackup restore
 echo "* Homebrew updates..."
 brew bundle --global
 brew upgrade
-brew cleanup
 
 echo "* Upgrading mac app store apps..."
 mas upgrade
