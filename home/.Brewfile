@@ -87,6 +87,7 @@ cask 'vagrant'
 cask 'virtualbox'
 cask 'virtualbox-extension-pack'
 cask 'visual-studio-code'
+cask 'zoomus'
 # mac app store
 mas 'Cyberduck', id: 409222199
 mas 'Day One', id: 1055511498
