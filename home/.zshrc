@@ -19,7 +19,7 @@ export ZSH_CUSTOM=$HOME/.zsh/custom
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(asdf autojump aws extract command-not-found tmux tmuxinator git github git-flow ssh-agent golang vagrant knife docker docker-compose mix mix-fast)
+plugins=(asdf autojump aws extract command-not-found tmux tmuxinator git github ssh-agent docker docker-compose mix-fast)
 
 # ruby
 plugins=($plugins ruby gem rails bundler heroku)
@@ -31,7 +31,7 @@ plugins=($plugins npm yarn)
 plugins=($plugins pip)
 
 # php / drupal
-plugins=($plugins drush composer)
+plugins=($plugins composer)
 
 # Platform specific settings
 case "$OSTYPE" in
@@ -42,8 +42,6 @@ case "$OSTYPE" in
         plugins=($plugins deb)
         ;;
 esac
-
-UNBUNDLED_COMMANDS=(knife)
 
 # OH MY ZSH!
 source $ZSH/oh-my-zsh.sh

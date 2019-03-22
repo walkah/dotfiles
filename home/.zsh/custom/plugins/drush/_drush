@@ -1,6 +1,0 @@
-#compdef drush
-#autoload
-
-local -a drush_commands
-drush_commands=($(drush --early=includes/complete.inc $words[*] ))
-_describe -t commands 'drush commands' drush_commands
