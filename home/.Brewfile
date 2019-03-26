@@ -53,7 +53,6 @@ cask 'choosy'
 cask 'dash'
 cask 'docker'
 cask 'dropbox'
-cask 'drafts'
 cask 'encryptme'
 cask 'fantastical'
 cask 'firefox'
@@ -92,6 +91,7 @@ cask 'zoomus'
 mas 'Cyberduck', id: 409222199
 mas 'Day One', id: 1055511498
 mas 'Deliveries', id: 924726344
+mas 'Drafts', id: 1435957248
 mas 'Keynote', id: 409183694
 mas 'Notability', id: 736189492
 mas 'Pages', id: 409201541
