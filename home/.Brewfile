@@ -96,7 +96,7 @@ mas 'Keynote', id: 409183694
 mas 'Notability', id: 736189492
 mas 'Pages', id: 409201541
 mas 'Pocket', id: 568494494
-mas 'Reeder', id: 880001334
+mas 'Reeder', id: 1449412482
 mas 'Simplify', id: 448003584
 mas 'Spark', id: 1176895641
 mas 'Todoist', id: 585829637
