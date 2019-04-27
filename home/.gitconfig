@@ -13,6 +13,7 @@
 	smu = submodule update --init --recursive
 	ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
 	up = pull --rebase --autostash
+  cleanup = "!git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n 1 git branch -d"
 [github]
 	user = walkah
 [git-up "bundler"]
