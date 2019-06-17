@@ -25,7 +25,7 @@ plugins=(asdf autojump aws extract command-not-found tmux tmuxinator git github 
 plugins=($plugins ruby gem rails bundler heroku)
 
 # node
-plugins=($plugins npm yarn)
+plugins=($plugins npm yarn gatsby react-native)
 
 # python
 plugins=($plugins pip)
