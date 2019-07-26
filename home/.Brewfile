@@ -43,7 +43,6 @@ cask '1password'
 cask 'alfred'
 cask 'android-studio'
 cask 'brave-browser'
-cask 'choosy'
 cask 'dash'
 cask 'docker'
 cask 'dropbox'
@@ -74,9 +73,12 @@ cask 'synology-drive'
 cask 'vagrant'
 cask 'virtualbox'
 cask 'virtualbox-extension-pack'
+cask 'viscosity'
 cask 'visual-studio-code'
 cask 'zoomus'
 # mac app store
+mas 'Bumpr', id: 1166066070
+mas 'Cardhop', id: 1290358394
 mas 'Cyberduck', id: 409222199
 mas 'Day One', id: 1055511498
 mas 'Deliveries', id: 924726344
