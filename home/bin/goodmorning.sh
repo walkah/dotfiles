@@ -1,7 +1,7 @@
 #!/bin/sh
 
 function install_latest() {
-  version=$(asdf list-all $1 | grep -v - | tail -1)
+  version=$(asdf list-all $1 | grep -v '[a-z]' | tail -1)
   asdf install $1 $version 
   asdf global $1 $version
 }
