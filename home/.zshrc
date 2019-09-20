@@ -19,7 +19,7 @@ export ZSH_CUSTOM=$HOME/.zsh/custom
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(asdf autojump aws extract command-not-found tmux tmuxinator git github ssh-agent docker docker-compose mix-fast)
+plugins=(asdf autojump aws gcloud extract command-not-found tmux tmuxinator git github ssh-agent docker docker-compose mix-fast)
 
 # ruby
 plugins=($plugins ruby gem rails bundler heroku)
