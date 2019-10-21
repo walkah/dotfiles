@@ -40,6 +40,7 @@ brew 'wget'
 brew 'zlib'
 # casks
 cask '1password'
+cask 'adoptopenjdk8'
 cask 'alfred'
 cask 'android-studio'
 cask 'brave-browser'
