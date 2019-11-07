@@ -28,7 +28,7 @@ plugins=($plugins ruby gem rails bundler heroku)
 plugins=($plugins npm yarn gatsby react-native)
 
 # python
-plugins=($plugins pip)
+plugins=($plugins pip pipenv)
 
 # php / drupal
 plugins=($plugins composer)
