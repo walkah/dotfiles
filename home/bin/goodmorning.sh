@@ -14,7 +14,7 @@ echo "* Restoring mackup..."
 mackup restore
 
 echo "* Homebrew updates..."
-brew bundle --global
+brew bundle --global --no-lock
 brew upgrade
 
 echo "* Upgrading mac app store apps..."
