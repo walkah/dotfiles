@@ -4,8 +4,7 @@ cask_args appdir: '/Applications'
 tap 'homebrew/cask-drivers'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
-tap 'jawshooah/pyenv'
-tap 'nodenv/nodenv'
+tap 'heroku/brew'
 # brews
 brew 'autoconf'
 brew 'autojump'
@@ -47,8 +46,8 @@ cask 'brave-browser'
 cask 'dash'
 cask 'docker'
 cask 'dropbox'
-cask 'encryptme'
 cask 'fantastical'
+cask 'figma'
 cask 'firefox'
 cask 'font-hack'
 cask 'font-inconsolata'
@@ -60,7 +59,6 @@ cask 'istat-menus'
 cask 'iterm2'
 cask 'keybase'
 cask 'microsoft-office'
-cask 'nightowl'
 cask 'ngrok'
 cask 'postman'
 cask 'rescuetime'
@@ -79,7 +77,6 @@ cask 'visual-studio-code'
 cask 'zoomus'
 # mac app store
 mas 'Bumpr', id: 1166066070
-mas 'Cardhop', id: 1290358394
 mas 'Cyberduck', id: 409222199
 mas 'Day One', id: 1055511498
 mas 'Deliveries', id: 924726344
