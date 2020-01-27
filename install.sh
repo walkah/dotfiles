@@ -3,9 +3,9 @@
 if [ ! -x "$(command -v git)" ]; then 
   echo "Installing xcode commandline tools..."
   sudo xcode-select --install
-  # Mojave fix
-  sudo installer -pkg /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg -target /
+fi
 
+if [ ! -x "$(command -v brew)" ]; then
   echo "Installing homebrew..."
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 else
@@ -23,8 +23,8 @@ fi
 if [ ! -d ~/.homesick ]; then
   echo "Installing homesick..."
   sudo gem install homesick
-  homesick clone git@github.com:walkah/dotfiles.git
-  homesick symlink -f
+  homesick clone https://github.com/walkah/dotfiles.git
+  homesick symlink
 else
   echo "Homesick already installed."
 fi
