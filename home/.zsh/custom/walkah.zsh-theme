@@ -7,7 +7,7 @@ function asdf_prompt() {
   echo $(asdf current $1|awk '{print $1}')
 }
 
-PROMPT='%{$fg[$HCOLOR]%}%m%{$reset_color%}:%c $(git_prompt_info)%{$fg[red]%}%(!.#.»)%{$reset_color%} '
+PROMPT='%{$fg[$HCOLOR]%}%m%{$reset_color%}:$(shrink_path -f) $(git_prompt_info)%{$fg[red]%}%(!.#.»)%{$reset_color%} '
 PROMPT2='%{$fg[red]%}\ %{$reset_color%}'
 if (( $+commands[asdf] )); then
 	RPS1='%{$fg[cyan]%}(%{$fg[red]%}$(asdf_prompt ruby) %{$fg[green]%}$(asdf_prompt nodejs) %{$fg[blue]%}$(asdf_prompt python)%{$fg[cyan]%}) %{$reset_color%}${return_code}'
