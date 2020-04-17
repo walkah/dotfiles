@@ -50,6 +50,12 @@ if [ -f /usr/local/bin/aws_zsh_completer.sh ]; then
   source /usr/local/bin/aws_zsh_completer.sh
 fi
 
+# Android Studio
+if [ -d ~/Library/Android/sdk ]; then
+  export ANDROID_SDK=~/Library/Android/sdk
+  export PATH=~/Library/Android/sdk/platform-tools:$PATH
+fi
+
 if [ $TERM = "screen" ]; then
   export DISABLE_AUTO_TITLE="true"
 fi
