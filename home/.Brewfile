@@ -6,6 +6,7 @@ tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 tap 'heroku/brew'
 # brews
+brew 'asdf'
 brew 'autoconf'
 brew 'autojump'
 brew 'automake'

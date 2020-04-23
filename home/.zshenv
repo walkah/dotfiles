@@ -13,3 +13,6 @@ export CVS_RSH=ssh
 #export CVSROOT=/home/cvs
 
 [ -f $HOME/.environment ] && . $HOME/.environment
+
+# Load asdf
+. $(brew --prefix asdf)/asdf.sh

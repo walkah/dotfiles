@@ -29,11 +29,5 @@ else
   echo "Homesick already installed."
 fi
 
-if [ ! -d ~/.asdf ]; then 
-  git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.6.0
-else 
-  echo "asdf already installed."
-fi
-
 echo "Initial brew bundle..."
 brew bundle --global
