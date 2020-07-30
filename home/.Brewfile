@@ -37,6 +37,7 @@ brew 'ssh-copy-id'
 brew 'tmux'
 brew 'wget'
 brew 'zlib'
+brew 'zsh-autosuggestions'
 # casks
 cask '1password'
 cask 'adoptopenjdk8'

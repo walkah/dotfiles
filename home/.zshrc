@@ -56,6 +56,12 @@ if [ -d ~/Library/Android/sdk ]; then
   export PATH=~/Library/Android/sdk/platform-tools:$PATH
 fi
 
+# zsh autosuggestions
+zsh_autosuggestions=$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+if [ -f $zsh_autosuggestions ]; then
+  source $zsh_autosuggestions
+fi
+
 if [ $TERM = "screen" ]; then
   export DISABLE_AUTO_TITLE="true"
 fi
