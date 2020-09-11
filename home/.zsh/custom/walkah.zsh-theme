@@ -4,7 +4,7 @@ if [ -z $SSH_CONNECTION ]; then HCOLOR="green"; else HCOLOR="blue"; fi
 local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
 
 function asdf_prompt() {
-  echo $(asdf current $1|awk '{print $1}')
+  echo $(asdf current $1|awk '{print $2}')
 }
 
 PROMPT='%{$fg[$HCOLOR]%}%m%{$reset_color%}:$(shrink_path -f) $(git_prompt_info)%{$fg[red]%}%(!.#.»)%{$reset_color%} '
