@@ -79,12 +79,12 @@ cask 'zoomus'
 mas 'Bumpr', id: 1166066070
 mas 'Cyberduck', id: 409222199
 mas 'Day One', id: 1055511498
-mas 'Deliveries', id: 924726344
 mas 'Drafts', id: 1435957248
 mas 'Keynote', id: 409183694
 mas 'Magnet', id: 441258766
 mas 'Notability', id: 736189492
 mas 'Pages', id: 409201541
+mas 'Parcel', id: 639968404
 mas 'Pocket', id: 568494494
 mas 'Reeder', id: 1449412482
 mas 'Todoist', id: 585829637
