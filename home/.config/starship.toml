@@ -1,0 +1,13 @@
+[aws]
+disabled=true
+
+[character]
+success_symbol = "[»](bold green) "
+error_symbol = "[✗](bold red) "
+
+[directory]
+fish_style_pwd_dir_length = 1
+truncation_length = 1
+
+[gcloud]
+disabled=true

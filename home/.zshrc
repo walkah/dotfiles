@@ -3,7 +3,7 @@ export ZSH=$HOME/.oh-my-zsh
 
 # Set to the name theme to load.
 # Look in ~/.oh-my-zsh/themes/
-export ZSH_THEME="walkah"
+# export ZSH_THEME="walkah"
 
 # My custom directory
 export ZSH_CUSTOM=$HOME/.zsh/custom
@@ -19,7 +19,7 @@ export ZSH_CUSTOM=$HOME/.zsh/custom
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(asdf shrink-path aws gcloud extract command-not-found tmux tmuxinator git github ssh-agent docker docker-compose mix)
+plugins=(asdf aws gcloud extract command-not-found tmux git github ssh-agent docker docker-compose mix)
 
 # ruby
 if [ -x ruby ]; then
@@ -27,7 +27,7 @@ if [ -x ruby ]; then
 fi
 
 # node
-plugins=($plugins npm yarn gatsby react-native)
+plugins=($plugins npm yarn react-native)
 
 # python
 plugins=($plugins pip pipenv)
@@ -44,11 +44,6 @@ esac
 
 # OH MY ZSH!
 source $ZSH/oh-my-zsh.sh
-
-# AWS CLI
-if [ -f /usr/local/bin/aws_zsh_completer.sh ]; then
-  source /usr/local/bin/aws_zsh_completer.sh
-fi
 
 # Android Studio
 if [ -d ~/Library/Android/sdk ]; then
@@ -67,3 +62,5 @@ if [ $TERM = "screen" ]; then
 fi
 export EDITOR="vim"
 export LSCOLORS="ExGxFxdxCxDxDxhbadExEx"
+
+eval "$(starship init zsh)"
