@@ -11,3 +11,10 @@ truncation_length = 1
 
 [gcloud]
 disabled=true
+
+[hostname]
+ssh_only = false
+format = "[$hostname]($style):"
+
+[username]
+format = "[$user]($style)@"
