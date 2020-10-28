@@ -16,3 +16,5 @@ export CVS_RSH=ssh
 
 # Load asdf
 . $(brew --prefix asdf)/asdf.sh
+
+[ -e $HOME/.nix-profile/etc/profile.d/nix.sh ] && . $HOME/.nix-profile/etc/profile.d/nix.sh
