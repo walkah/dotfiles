@@ -19,6 +19,7 @@ brew 'git'
 brew 'gsl'
 brew 'heroku'
 brew 'htop'
+brew 'just'
 brew 'kubernetes-cli'
 brew 'libtool'
 brew 'libxslt'
@@ -34,6 +35,8 @@ brew 'pwgen'
 brew 'readline'
 brew 'reattach-to-user-namespace'
 brew 'ssh-copy-id'
+brew 'starship'
+brew 'stack'
 brew 'tmux'
 brew 'wget'
 brew 'zlib'
@@ -50,7 +53,7 @@ cask 'dropbox'
 cask 'fantastical'
 cask 'figma'
 cask 'firefox'
-cask 'font-hack'
+cask 'font-hack-nerd-font'
 cask 'google-chrome'
 cask 'google-cloud-sdk'
 cask 'gpg-suite'
@@ -86,7 +89,7 @@ mas 'Notability', id: 736189492
 mas 'Pages', id: 409201541
 mas 'Parcel', id: 639968404
 mas 'Pocket', id: 568494494
-mas 'Reeder', id: 1449412482
+mas 'Reeder', id: 1529448980
 mas 'Todoist', id: 585829637
 mas 'Tweetbot', id: 1384080005
 mas 'UlyssesMac', id: 1225570693
