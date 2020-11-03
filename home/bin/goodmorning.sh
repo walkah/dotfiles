@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 function install_latest() {
   version=$(asdf list-all $1 | grep -v '[a-z]' | tail -1)
@@ -10,15 +10,26 @@ echo "* Updating homesick..."
 homesick pull
 homesick symlink
 
-echo "* Restoring mackup..."
-mackup restore
+case "$OSTYPE" in 
+  darwin*)
+    echo "* Restoring mackup..."
+    mackup restore
+    
+    echo "* Homebrew updates..."
+    brew bundle --global --no-lock
+    brew upgrade
+    
+    echo "* Upgrading mac app store apps..."
+    mas upgrade
+    ;;
+  linux*)
+    sudo apt update && sudo apt upgrade
+    sudo snap refresh
+  
+    ;;
+esac
 
-echo "* Homebrew updates..."
-brew bundle --global --no-lock
-brew upgrade
 
-echo "* Upgrading mac app store apps..."
-mas upgrade
 
 echo "* asdf update..."
 export R_CONFIGURE_OPTIONS="--with-x=no"

@@ -39,6 +39,7 @@ case "$OSTYPE" in
     ;;
   linux*)
     plugins=($plugins debian)
+    export PATH=/snap/bin:$PATH
     ;;
 esac
 
@@ -52,9 +53,11 @@ if [ -d ~/Library/Android/sdk ]; then
 fi
 
 # zsh autosuggestions
-zsh_autosuggestions=$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-if [ -f $zsh_autosuggestions ]; then
-  source $zsh_autosuggestions
+if [ type brew &> /dev/null ]; then
+  zsh_autosuggestions=$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+  if [ -f $zsh_autosuggestions ]; then
+    source $zsh_autosuggestions
+  fi
 fi
 
 if [ $TERM = "screen" ]; then
