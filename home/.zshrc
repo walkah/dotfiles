@@ -53,7 +53,7 @@ if [ -d ~/Library/Android/sdk ]; then
 fi
 
 # zsh autosuggestions
-if [ type brew &> /dev/null ]; then
+if command -v brew &> /dev/null; then
   zsh_autosuggestions=$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
   if [ -f $zsh_autosuggestions ]; then
     source $zsh_autosuggestions

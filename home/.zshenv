@@ -15,7 +15,7 @@ export CVS_RSH=ssh
 [ -f $HOME/.environment ] && . $HOME/.environment
 
 # Load asdf
-if [ type brew &> /dev/null ]; then
+if command -v brew &> /dev/null; then
   . $(brew --prefix asdf)/asdf.sh
 else 
   . ~/.asdf/asdf.sh
