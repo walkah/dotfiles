@@ -30,7 +30,11 @@
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/org/")
+(setq org-directory "~/.org"
+      org-roam-directory "~/.org/roam"
+      deft-directory "~/.org"
+      deft-default-extension "org"
+      deft-recursive t)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -55,6 +59,7 @@
 ;; they are implemented.
 ;;
 ;;
+;;(global-wakatime-mode)
 (add-hook 'js2-mode-hook 'prettier-js-mode)
 (add-hook 'typescript-mode-hook 'prettier-js-mode)
 (add-hook 'web-mode-hook 'prettier-js-mode)
