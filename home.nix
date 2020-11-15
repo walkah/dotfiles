@@ -8,13 +8,22 @@
   home.username = builtins.getEnv "USER";
   home.homeDirectory = builtins.getEnv "HOME";
 
-  home.packages = [
-    pkgs.emacs
-    pkgs.git
-    pkgs.htop
-    pkgs.pinentry
-    pkgs.pinentry-curses
-    pkgs.ripgrep
+  xdg.configFile."starship.toml".source = ./home/.config/starship.toml;
+
+  home.packages = with pkgs; [
+    cmake
+    direnv
+    docker
+    docker-compose
+    git
+    htop
+    pinentry
+    ripgrep
+    sqlite
+    ((emacsPackagesNgGen emacs).emacsWithPackages (epkgs: [
+      epkgs.vterm
+    ]))
+
   ];
 
   programs = {
@@ -24,39 +33,18 @@
       enableCompletion = true;
       oh-my-zsh = {
         enable = true;
-        theme = "robbyrussell";
         plugins = [
+          "docker"
           "git"
           "ssh-agent"
           "tmux"
         ];
       };
-    };
-    starship = {
-      enable = true;
-      enableZshIntegration = true;
-      settings = {
-        character = {
-          success_symbol = "[»](bold green) ";
-          error_symbol = "[✗](bold red) ";
-        };
-        directory = {
-          fish_style_pwd_dir_length = 1;
-          truncation_length = 1;
-        };
-        gcloud = {
-          disabled = true;
-        };
-        hostname = {
-          ssh_only = false;
-          format = "[$hostname]($style):";
-        };
-        username = {
-          format = "[$user]($style)@";
-        };
+      sessionVariables = {
+        EDITOR = "vim";
       };
-    }; 
-
+    };
+    starship.enable = true;
     git = {
       enable    = true;
       userName  = "James Walker";
@@ -77,6 +65,13 @@
 
     tmux = {
       enable = true;
+      extraConfig = ''
+        set -g status-bg black
+        set -g status-fg white
+      '';
+      newSession = true;
+      shortcut = "o";
+      terminal = "screen-256color";
     };
   
     vim = {
@@ -85,13 +80,15 @@
   };
 
   services = {
-      gpg-agent = {
-        enable           = true;
-        enableSshSupport = true;
-        extraConfig = ''
-          allow-emacs-pinentry
-        '';
-      };
+    lorri.enable = true;
+    gpg-agent = {
+      enable           = true;
+      enableSshSupport = true;
+      extraConfig = ''
+        allow-emacs-pinentry
+        allow-loopback-pinentry
+      '';
+    };
   };
 
   # This value determines the Home Manager release that your
