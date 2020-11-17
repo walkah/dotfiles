@@ -20,6 +20,7 @@
     pinentry
     ripgrep
     sqlite
+    wakatime
     ((emacsPackagesNgGen emacs).emacsWithPackages (epkgs: [
       epkgs.vterm
     ]))
@@ -34,6 +35,7 @@
       oh-my-zsh = {
         enable = true;
         plugins = [
+          "direnv"
           "docker"
           "git"
           "ssh-agent"

@@ -31,7 +31,7 @@
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/.org"
-      org-roam-directory "~/.org/roam"
+      org-roam-directory "~/.org"
       deft-directory "~/.org"
       deft-default-extension "org"
       deft-recursive t)
@@ -58,8 +58,12 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 ;;
-;;
-;;(global-wakatime-mode)
+(after! wakatime-mode
+  (global-wakatime-mode))
+
+(after! pinentry
+  (pinentry-start))
+
 (add-hook 'js2-mode-hook 'prettier-js-mode)
 (add-hook 'typescript-mode-hook 'prettier-js-mode)
 (add-hook 'web-mode-hook 'prettier-js-mode)
