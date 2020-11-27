@@ -126,6 +126,11 @@
       shortcut = "o";
       terminal = "screen-256color";
     };
+
+    emacs = {
+      enable = true;
+      extraPackages = epkgs: [ epkgs.vterm ];
+    };
   
     vim = {
       enable = true;
