@@ -14,6 +14,7 @@
   ];
 
   home.packages = with pkgs; [
+    aws
     cmake
     direnv
     docker
@@ -21,17 +22,15 @@
     fd
     git
     gitAndTools.gh
+    google-cloud-sdk
     htop
     jq
     mr
+    niv
     pinentry
     ripgrep
     sqlite
     wakatime
-    ((emacsPackagesNgGen emacs).emacsWithPackages (epkgs: [
-      epkgs.vterm
-    ]))
-
   ];
 
   programs = {
@@ -48,6 +47,7 @@
           "direnv"
           "docker"
           "docker-compose"
+          "gcloud"
           "git"
           "ssh-agent"
           "tmux"
@@ -74,6 +74,9 @@
           ssh_only = false;
           format = "[$hostname]($style):";
         };
+        gcloud = {
+          disabled = true;
+        };
         kubernetes = {
           disabled = false;
         };
@@ -89,7 +92,7 @@
       userEmail = "walkah@walkah.net";
 
       aliases = {
-        lg = "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit ";
+        lg = "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit";
         st = "status -s";
       };
 
