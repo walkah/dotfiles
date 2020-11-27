@@ -6,7 +6,7 @@ tap 'homebrew/cask-fonts'
 tap 'd12frosted/emacs-plus'
 
 # brews
-brew 'emacs-plus'
+brew 'emacs-plus@28'
 brew 'mas'
 
 # casks
@@ -19,8 +19,7 @@ cask 'docker'
 cask 'fantastical'
 cask 'figma'
 cask 'firefox'
-cask 'font-hack'
-cask 'font-hack-nerd-font'
+cask 'font-jetbrains-mono'
 cask 'google-chrome'
 cask 'hazel'
 cask 'iterm2'
