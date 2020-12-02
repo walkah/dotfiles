@@ -58,11 +58,8 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 ;;
-(after! wakatime-mode
-  (global-wakatime-mode))
-
-(after! pinentry
-  (pinentry-start))
+(global-wakatime-mode)
+(pinentry-start)
 
 (add-hook 'js2-mode-hook 'prettier-js-mode)
 (add-hook 'typescript-mode-hook 'prettier-js-mode)

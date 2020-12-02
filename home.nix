@@ -127,10 +127,12 @@
       terminal = "screen-256color";
     };
 
-    emacs = {
+    emacs = if (pkgs.stdenv.isLinux) then {
       enable = true;
       extraPackages = epkgs: [ epkgs.vterm ];
-    };
+    }
+    else 
+      {};
   
     vim = {
       enable = true;
