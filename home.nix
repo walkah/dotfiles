@@ -40,6 +40,7 @@
       enableCompletion = true;
       initExtra = ''
         unset RPS1
+        eval $(starship init zsh)
       '';
       oh-my-zsh = {
         enable = true;
@@ -60,7 +61,7 @@
 
     starship = {
       enable = true;
-      enableZshIntegration = true;
+      enableZshIntegration = false;
       settings = {
         character = {
           success_symbol = "[»](bold green) ";
