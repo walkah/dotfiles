@@ -27,10 +27,12 @@
     jq
     mr
     niv
+    nodejs
     pinentry
     ripgrep
     sqlite
     wakatime
+    yarn
   ];
 
   programs = {
