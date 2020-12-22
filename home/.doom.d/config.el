@@ -60,3 +60,5 @@
 ;;
 (global-wakatime-mode)
 (pinentry-start)
+
+(add-to-list 'auto-mode-alist '("\\.njk" . web-mode))
