@@ -1,5 +1,12 @@
-{ config, pkgs, ... }:
-{
+{ config, pkgs, ... }: {
+  imports = [
+    ./modules/golang.nix
+    ./modules/haskell.nix
+    ./modules/nodejs.nix
+    ./modules/python.nix
+    ./modules/rust.nix
+  ];
+
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
@@ -8,10 +15,7 @@
   # home.username = builtins.getEnv "USER";
   # home.homeDirectory = builtins.getEnv "HOME";
 
-  home.sessionPath = [
-    "$HOME/.local/bin"
-    "$HOME/.emacs.d/bin"
-  ];
+  home.sessionPath = [ "$HOME/.local/bin" "$HOME/.emacs.d/bin" ];
 
   home.packages = with pkgs; [
     aws
@@ -27,12 +31,11 @@
     jq
     mr
     niv
-    nodejs
+    nixfmt
     pinentry
     ripgrep
     sqlite
     wakatime
-    yarn
   ];
 
   programs = {
@@ -56,18 +59,19 @@
           "tmux"
         ];
       };
-      sessionVariables = {
-        EDITOR = "vim";
-      };
+      sessionVariables = { EDITOR = "vim"; };
     };
-
+    dircolors = {
+      enable = true;
+      enableZshIntegration = true;
+    };
     starship = {
       enable = true;
       enableZshIntegration = false;
       settings = {
         character = {
           success_symbol = "[»](bold green) ";
-            error_symbol = "[✗](bold red) ";
+          error_symbol = "[✗](bold red) ";
         };
         directory = {
           fish_style_pwd_dir_length = 1;
@@ -77,43 +81,39 @@
           ssh_only = false;
           format = "[$hostname]($style):";
         };
-        gcloud = {
-          disabled = true;
-        };
-        kubernetes = {
-          disabled = false;
-        };
-        username = {
-          format = "[$user]($style)@";
-        };
+        gcloud = { disabled = true; };
+        kubernetes = { disabled = false; };
+        username = { format = "[$user]($style)@"; };
       };
     };
 
     git = {
-      enable    = true;
-      userName  = "James Walker";
+      enable = true;
+      userName = "James Walker";
       userEmail = "walkah@walkah.net";
 
       aliases = {
-        lg = "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit";
+        lg =
+          "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit";
         st = "status -s";
+        undo = "reset HEAD~1 --mixed";
       };
 
       extraConfig = {
+        github.user = "walkah";
         pull.rebase = true;
+        rebase.autoStash = true;
       };
 
       signing = {
-        key           = "8896FEC44D47A81C";
+        key = "8896FEC44D47A81C";
         signByDefault = true;
       };
     };
 
     gpg = {
       enable = true;
-      settings = {
-        default-key = "8896FEC44D47A81C";
-      };
+      settings = { default-key = "8896FEC44D47A81C"; };
     };
 
     tmux = {
@@ -133,32 +133,25 @@
     emacs = if (pkgs.stdenv.isLinux) then {
       enable = true;
       extraPackages = epkgs: [ epkgs.vterm ];
-    }
-    else 
-      {};
-  
-    vim = {
-      enable = true;
-    };
+    } else
+      { };
+
+    vim = { enable = true; };
   };
 
-  services =
-    if (pkgs.stdenv.isLinux) then
-      {
-        lorri.enable = true;
-        syncthing.enable = true;
-        gpg-agent = {
-          enable           = true;
-          enableSshSupport = true;
-          extraConfig = ''
-            allow-emacs-pinentry
-            allow-loopback-pinentry
-          '';
-        };
-      }
-  else
-    {};
-
+  services = if (pkgs.stdenv.isLinux) then {
+    lorri.enable = true;
+    syncthing.enable = true;
+    gpg-agent = {
+      enable = true;
+      enableSshSupport = true;
+      extraConfig = ''
+        allow-emacs-pinentry
+        allow-loopback-pinentry
+      '';
+    };
+  } else
+    { };
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
