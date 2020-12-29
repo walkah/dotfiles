@@ -50,6 +50,7 @@
       oh-my-zsh = {
         enable = true;
         plugins = [
+          "asdf"
           "direnv"
           "docker"
           "docker-compose"
@@ -101,6 +102,7 @@
 
       extraConfig = {
         github.user = "walkah";
+        init.defaultBranch = "main";
         pull.rebase = true;
         rebase.autoStash = true;
       };
