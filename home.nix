@@ -132,11 +132,11 @@
       terminal = "screen-256color";
     };
 
-    emacs = if (pkgs.stdenv.isLinux) then {
+    emacs = {
       enable = true;
+      package = pkgs.emacs-nox;
       extraPackages = epkgs: [ epkgs.vterm ];
-    } else
-      { };
+    };
 
     vim = { enable = true; };
   };

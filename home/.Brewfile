@@ -3,11 +3,9 @@
 # taps
 tap 'homebrew/cask-drivers'
 tap 'homebrew/cask-fonts'
-tap 'd12frosted/emacs-plus'
 
 # brews
 brew 'coreutils'
-brew 'emacs-plus@28'
 brew 'mas'
 
 # casks
