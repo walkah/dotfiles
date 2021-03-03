@@ -27,6 +27,7 @@
     git
     gitAndTools.gh
     google-cloud-sdk
+    heroku
     htop
     jq
     mr
