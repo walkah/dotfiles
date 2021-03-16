@@ -4,10 +4,21 @@
   homebrew = {
     enable = true;
     autoUpdate = true;
-    brews = [ "coreutils" "mas" ];
+    cleanup = "zap";
+    global = {
+      brewfile = true;
+      noLock = true;
+    };
+
+    taps = [ "homebrew/cask" "homebrew/cask-drivers" "homebrew/cask-fonts" ];
+
+    brews = [ "coreutils" ];
+
     casks = [
       "1password"
+      "adobe-acrobat-reader"
       "alfred"
+      "balenaetcher"
       "brave-browser"
       "dash"
       "discord"
@@ -17,24 +28,34 @@
       "firefox"
       "font-jetbrains-mono"
       "google-chrome"
+      "gpg-suite"
       "hazel"
       "iterm2"
       "keybase"
+      "microsoft-auto-update"
+      "microsoft-edge"
+      "microsoft-office"
+      "plexamp"
       "slack"
       "sonos"
       "spotify"
       "stats"
+      "steam"
       "syncthing"
       "synology-drive"
       "visual-studio-code"
       "zoom"
     ];
+
     masApps = {
       Bumpr = 1166066070;
       "Day One" = 1055511498;
       Drafts = 1435957248;
       Magnet = 441258766;
+      Parcel = 639968404;
+      Reeder = 1529448980;
       Todoist = 585829637;
+      UlyssesMac = 1225570693;
       Xcode = 497799835;
     };
   };
