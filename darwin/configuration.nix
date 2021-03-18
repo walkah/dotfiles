@@ -15,6 +15,15 @@
   services.nix-daemon.enable = true;
   nix.package = pkgs.nix;
 
+  nix.distributedBuilds = true;
+  nix.buildMachines = [{
+    hostName = "plato";
+    systems = [ "x86_64-linux" "aarch64-linux" ];
+    maxJobs = 12;
+    speedFactor = 2;
+    supportedFeatures = [ "nixos-test" "benchmark" "big-parallel" "kvm" ];
+  }];
+
   # Create /etc/bashrc that loads the nix-darwin environment.
   programs.zsh.enable = true; # default shell on catalina
   # programs.fish.enable = true;
