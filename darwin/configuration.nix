@@ -25,7 +25,12 @@
   }];
 
   # Create /etc/bashrc that loads the nix-darwin environment.
-  programs.zsh.enable = true; # default shell on catalina
+  programs = {
+    zsh = {
+      enable = true;
+      promptInit = "";
+    };
+  };
   # programs.fish.enable = true;
 
   users.nix.configureBuildUsers = true;

@@ -57,10 +57,6 @@
       enable = true;
       enableAutosuggestions = true;
       enableCompletion = true;
-      initExtra = ''
-        unset RPS1
-        eval $(starship init zsh)
-      '';
       oh-my-zsh = {
         enable = true;
         plugins = [
@@ -82,7 +78,7 @@
     };
     starship = {
       enable = true;
-      enableZshIntegration = false;
+      enableZshIntegration = true;
       settings = {
         character = {
           success_symbol = "[»](bold green) ";
