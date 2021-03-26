@@ -18,6 +18,7 @@
       "1password"
       "adobe-acrobat-reader"
       "alfred"
+      "backblaze"
       "balenaetcher"
       "brave-browser"
       "dash"
