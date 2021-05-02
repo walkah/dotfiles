@@ -62,3 +62,4 @@
 (pinentry-start)
 
 (add-to-list 'auto-mode-alist '("\\.njk" . web-mode))
+(setq lsp-haskell-formatting-provider "stylish-haskell")

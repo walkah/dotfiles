@@ -24,6 +24,11 @@
     supportedFeatures = [ "nixos-test" "benchmark" "big-parallel" "kvm" ];
   }];
 
+  # Binary Cache for Haskell.nix
+  nix.binaryCachePublicKeys =
+    [ "hydra.iohk.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ=" ];
+  nix.binaryCaches = [ "https://hydra.iohk.io" ];
+
   # Create /etc/bashrc that loads the nix-darwin environment.
   programs = {
     zsh = {
