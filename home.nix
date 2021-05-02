@@ -144,7 +144,7 @@
 
     emacs = {
       enable = true;
-      package = pkgs.emacs-nox;
+      package = pkgs.emacsMacport;
       extraPackages = epkgs: [ epkgs.vterm ];
     };
 

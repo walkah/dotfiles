@@ -5,7 +5,7 @@
 
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
-  environment.systemPackages = with pkgs; [ ];
+  environment.systemPackages = with pkgs; [ emacsMacport ];
 
   # Use a custom configuration.nix location.
   # $ darwin-rebuild switch -I darwin-config=$HOME/.config/nixpkgs/darwin/configuration.nix
@@ -50,6 +50,15 @@
       };
     };
   };
+
+  system.activationScripts.applications.text = pkgs.lib.mkForce (''
+    rm -rf /Applications/Nix
+    mkdir -p /Applications/Nix
+    for app in $(find ${config.system.build.applications}/Applications -maxdepth 1 -type l); do
+      src="$(/usr/bin/stat -f%Y "$app")"
+      cp -r "$src" /Applications/Nix
+    done
+  '');
 
   # Used for backwards compatibility, please read the changelog before changing.
   # $ darwin-rebuild changelog
