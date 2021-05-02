@@ -10,7 +10,12 @@
       noLock = true;
     };
 
-    taps = [ "homebrew/cask" "homebrew/cask-drivers" "homebrew/cask-fonts" ];
+    taps = [
+      "homebrew/cask"
+      "homebrew/cask-drivers"
+      "homebrew/cask-fonts"
+      "homebrew/cask-versions"
+    ];
 
     brews = [ "coreutils" ];
 
@@ -18,7 +23,6 @@
       "1password"
       "adobe-acrobat-reader"
       "alfred"
-      "backblaze"
       "balenaetcher"
       "brave-browser"
       "dash"
@@ -27,18 +31,22 @@
       "fantastical"
       "figma"
       "firefox"
+      "firefox-developer-edition"
       "font-jetbrains-mono"
+      "font-jetbrains-mono-nerd-font"
       "google-chrome"
       "gpg-suite"
       "hazel"
       "iterm2"
       "keybase"
+      "logitech-options"
       "microsoft-auto-update"
       "microsoft-edge"
       "microsoft-office"
       "minecraft"
       "plexamp"
       "rescuetime"
+      "rocket"
       "slack"
       "sonos"
       "spotify"
