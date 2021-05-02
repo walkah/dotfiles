@@ -4,6 +4,7 @@
     ./modules/haskell.nix
     ./modules/nodejs.nix
     ./modules/python.nix
+    ./modules/ruby.nix
     ./modules/rust.nix
   ];
 
