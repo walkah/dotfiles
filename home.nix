@@ -138,7 +138,6 @@
         set -g status-bg black
         set -g status-fg white
       '';
-      newSession = true;
       shortcut = "o";
       terminal = "screen-256color";
     };
