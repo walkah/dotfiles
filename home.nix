@@ -144,7 +144,7 @@
 
     emacs = {
       enable = true;
-      package = pkgs.emacsMacport;
+      package = if (pkgs.stdenv.isLinux) then pkgs.emacs else pkgs.emacsMacport;
       extraPackages = epkgs: [ epkgs.vterm ];
     };
 
