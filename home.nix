@@ -1,5 +1,6 @@
 { config, pkgs, ... }: {
   imports = [
+    ./modules/elixir.nix
     ./modules/golang.nix
     ./modules/haskell.nix
     ./modules/nodejs.nix
