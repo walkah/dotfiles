@@ -26,6 +26,7 @@
       "balenaetcher"
       "bartender"
       "brave-browser"
+      "bunch"
       "dash"
       "discord"
       "docker"
