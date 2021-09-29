@@ -44,9 +44,7 @@
       "iterm2"
       "keybase"
       "logitech-options"
-      "microsoft-auto-update"
       "microsoft-edge"
-      "microsoft-office"
       "minecraft"
       "obsidian"
       "plexamp"
@@ -70,6 +68,7 @@
       Magnet = 441258766;
       Parcel = 639968404;
       Reeder = 1529448980;
+      Tailscale = 1475387142;
       Todoist = 585829637;
       UlyssesMac = 1225570693;
       Xcode = 497799835;

@@ -1,14 +1,4 @@
 { config, pkgs, ... }: {
-  imports = [
-    ./modules/elixir.nix
-    ./modules/golang.nix
-    ./modules/haskell.nix
-    ./modules/nodejs.nix
-    ./modules/python.nix
-    ./modules/ruby.nix
-    ./modules/rust.nix
-  ];
-
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
@@ -17,27 +7,21 @@
   # home.username = builtins.getEnv "USER";
   # home.homeDirectory = builtins.getEnv "HOME";
 
-  home.sessionPath = [ "$HOME/.local/bin" "$HOME/.emacs.d/bin" ];
+  home.sessionPath =
+    [ "$HOME/.local/bin" "$HOME/.emacs.d/bin" "$HOME/.cargo/bin" ];
 
   home.packages = with pkgs; [
-    aws
-    cmake
     direnv
-    docker
-    docker-compose
+    exercism
     fd
     git
     gitAndTools.gh
-    google-cloud-sdk
-    heroku
     htop
     jq
     mr
     niv
     nixfmt
-    pinentry
     ripgrep
-    sqlite
     wakatime
   ];
 
@@ -54,6 +38,10 @@
     recursive = true;
   };
 
+  home.file.".ghci".text = ''
+    :set prompt "λ> "
+  '';
+
   programs = {
     zsh = {
       enable = true;
@@ -62,17 +50,22 @@
       oh-my-zsh = {
         enable = true;
         plugins = [
-          "asdf"
+          "bundler"
           "direnv"
           "docker"
           "docker-compose"
-          "gcloud"
           "git"
+          "golang"
+          "mix"
+          "rails"
           "ssh-agent"
           "tmux"
         ];
       };
-      sessionVariables = { EDITOR = "vim"; };
+      sessionVariables = {
+        EDITOR = "vim";
+        GOPATH = "$HOME/.go";
+      };
     };
     dircolors = {
       enable = true;
@@ -145,26 +138,12 @@
 
     emacs = {
       enable = true;
-      package = if (pkgs.stdenv.isLinux) then pkgs.emacs else pkgs.emacsMacport;
+      package = pkgs.emacs-nox;
       extraPackages = epkgs: [ epkgs.vterm ];
     };
 
     vim = { enable = true; };
   };
-
-  services = if (pkgs.stdenv.isLinux) then {
-    lorri.enable = true;
-    syncthing.enable = true;
-    gpg-agent = {
-      enable = true;
-      enableSshSupport = true;
-      extraConfig = ''
-        allow-emacs-pinentry
-        allow-loopback-pinentry
-      '';
-    };
-  } else
-    { };
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage

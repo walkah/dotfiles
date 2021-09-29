@@ -1,6 +1,0 @@
-flake8
-pipenv
-pylint
-pytest
-pytest-cache
-wakatime
