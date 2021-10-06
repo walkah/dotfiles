@@ -7,19 +7,21 @@
   # home.username = builtins.getEnv "USER";
   # home.homeDirectory = builtins.getEnv "HOME";
 
-  home.sessionPath =
-    [ "$HOME/.local/bin" "$HOME/.emacs.d/bin" "$HOME/.cargo/bin" ];
+  home.sessionPath = [
+    "$HOME/.cargo/bin"
+    "$HOME/.emacs.d/bin"
+    "$HOME/.go/bin"
+    "$HOME/.local/bin"
+  ];
 
   home.packages = with pkgs; [
     direnv
-    exercism
     fd
     git
     gitAndTools.gh
     htop
     jq
     mr
-    niv
     nixfmt
     ripgrep
     wakatime
