@@ -120,11 +120,6 @@
       };
     };
 
-    gpg = {
-      enable = true;
-      settings = { default-key = "8896FEC44D47A81C"; };
-    };
-
     tmux = {
       enable = true;
       extraConfig = ''
