@@ -27,6 +27,7 @@
       "bartender"
       "brave-browser"
       "bunch"
+      "calibre"
       "dash"
       "discord"
       "docker"

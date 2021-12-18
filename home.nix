@@ -22,8 +22,10 @@
     htop
     jq
     mr
+    nixpkgs-fmt
     nixfmt
     ripgrep
+    tea
     wakatime
   ];
 
