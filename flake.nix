@@ -7,7 +7,7 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, home-manager, flake-utils }: {
+  outputs = { self, nixpkgs, home-manager }: {
     homeConfigurations = {
       aarch64-darwin = home-manager.lib.homeManagerConfiguration {
         system = "aarch64-darwin";
