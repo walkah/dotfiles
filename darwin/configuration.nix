@@ -21,6 +21,9 @@
   # Auto upgrade nix package and the daemon service.
   services.nix-daemon.enable = true;
   nix.package = pkgs.nix;
+  nix.extraOptions = ''
+    experimental-features = nix-command flakes
+  '';
 
   nix.distributedBuilds = true;
   nix.buildMachines = [{
@@ -63,14 +66,16 @@
     };
   };
 
-  system.activationScripts.applications.text = pkgs.lib.mkForce (''
-    rm -rf /Applications/Nix
-    mkdir -p /Applications/Nix
-    for app in $(find ${config.system.build.applications}/Applications -maxdepth 1 -type l); do
-      src="$(/usr/bin/stat -f%Y "$app")"
-      cp -r "$src" /Applications/Nix
-    done
-  '');
+  system.activationScripts.applications.text = pkgs.lib.mkForce (
+    ''
+      rm -rf /Applications/Nix
+      mkdir -p /Applications/Nix
+      for app in $(find ${config.system.build.applications}/Applications -maxdepth 1 -type l); do
+        src="$(/usr/bin/stat -f%Y "$app")"
+        cp -r "$src" /Applications/Nix
+      done
+    ''
+  );
 
   # Used for backwards compatibility, please read the changelog before changing.
   # $ darwin-rebuild changelog
