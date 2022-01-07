@@ -16,6 +16,7 @@
 
   home.packages = with pkgs; [
     direnv
+    exa
     fd
     git
     gitAndTools.gh
@@ -70,10 +71,10 @@
         EDITOR = "vim";
         GOPATH = "$HOME/.go";
       };
-    };
-    dircolors = {
-      enable = true;
-      enableZshIntegration = true;
+      shellAliases = {
+        ls = "exa --git";
+        ll = "exa -lh --git";
+      };
     };
     starship = {
       enable = true;
