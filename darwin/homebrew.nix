@@ -49,8 +49,11 @@
       "minecraft"
       "obsidian"
       "plexamp"
+      "r"
+      "raycast"
       "rescuetime"
       "rocket"
+      "rstudio"
       "slack"
       "sonos"
       "spotify"
@@ -66,7 +69,6 @@
       Bumpr = 1166066070;
       "Day One" = 1055511498;
       Drafts = 1435957248;
-      Magnet = 441258766;
       Parcel = 639968404;
       Reeder = 1529448980;
       Tailscale = 1475387142;
