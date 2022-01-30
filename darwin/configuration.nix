@@ -11,6 +11,7 @@
     exercism
     go
     niv
+    nodejs
     rustup
   ];
 
