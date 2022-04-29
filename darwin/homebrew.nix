@@ -22,7 +22,6 @@
     casks = [
       "1password"
       "adobe-acrobat-reader"
-      "alfred"
       "balenaetcher"
       "bartender"
       "brave-browser"
@@ -38,6 +37,7 @@
       "firefox-developer-edition"
       "font-jetbrains-mono"
       "font-jetbrains-mono-nerd-font"
+      "gather"
       "google-chrome"
       "gpg-suite"
       "hazel"
@@ -45,6 +45,7 @@
       "iterm2"
       "keybase"
       "logitech-options"
+      "logseq"
       "microsoft-edge"
       "minecraft"
       "obsidian"
