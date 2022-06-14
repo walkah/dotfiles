@@ -9,6 +9,7 @@
 
   home.sessionPath = [
     "$HOME/.cargo/bin"
+    "$HOME/.deno/bin"
     "$HOME/.emacs.d/bin"
     "$HOME/.go/bin"
     "$HOME/.local/bin"
