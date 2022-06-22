@@ -28,6 +28,7 @@
     nixpkgs-fmt
     nixfmt
     ripgrep
+    rnix-lsp
     tea
     wakatime
   ];
