@@ -21,7 +21,7 @@
     exa
     fd
     git
-    gitAndTools.gh
+    gh
     htop
     jq
     mr
