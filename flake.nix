@@ -19,7 +19,7 @@
               system = system;
               homeDirectory = if pkgs.stdenv.isDarwin then "/Users/walkah" else "/home/walkah";
               username = "walkah";
-              stateVersion = "21.03";
+              stateVersion = "22.05";
               configuration = { config, pkgs, ... }: {
                 imports = [ ./home.nix ];
               };
