@@ -4,8 +4,8 @@
 
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
-  # home.username = builtins.getEnv "USER";
-  # home.homeDirectory = builtins.getEnv "HOME";
+  home.username = "walkah";
+  home.homeDirectory = if pkgs.stdenv.isDarwin then "/Users/walkah" else "/home/walkah";
 
   home.sessionPath = [
     "$HOME/.cargo/bin"

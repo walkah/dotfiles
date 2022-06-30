@@ -16,13 +16,11 @@
         {
           homeConfigurations = {
             walkah = home-manager.lib.homeManagerConfiguration {
-              system = system;
-              homeDirectory = if pkgs.stdenv.isDarwin then "/Users/walkah" else "/home/walkah";
-              username = "walkah";
-              stateVersion = "22.05";
-              configuration = { config, pkgs, ... }: {
-                imports = [ ./home.nix ];
-              };
+              inherit pkgs;
+
+              modules = [
+                ./home.nix
+              ];
             };
           };
           packages.default =
