@@ -16,8 +16,10 @@
   ];
 
   home.packages = with pkgs; [
+    btop
     cachix
     direnv
+    drone-cli
     exa
     fd
     git
