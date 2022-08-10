@@ -103,6 +103,12 @@
       };
     };
 
+    bat.enable = true;
+    fzf = {
+      enable = true;
+      fileWidgetOptions = [ "--preview 'bat --color always {}'" ];
+    };
+
     git = {
       enable = true;
       userName = "James Walker";
