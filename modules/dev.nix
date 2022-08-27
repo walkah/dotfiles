@@ -29,7 +29,7 @@
     stack
 
     # Javascript/Typescript
-    deno
+    # deno
     jq
     nodejs
     yarn
