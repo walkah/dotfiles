@@ -3,6 +3,7 @@
 {
   programs = {
     bat.enable = true;
+    dircolors.enable = true;
     direnv.enable = true;
     exa.enable = true;
     fzf = {
