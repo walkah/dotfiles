@@ -3,7 +3,6 @@
 {
   home.packages = with pkgs; [
     # General
-    btop
     cmake
     drone-cli
 
