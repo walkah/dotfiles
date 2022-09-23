@@ -15,7 +15,6 @@
       if [ ! -d $DOOM ]; then
         git clone --depth 1 https://github.com/hlissner/doom-emacs $DOOM
       fi
-      $DOOM/bin/doom sync
     '';
     source = ../config/.doom.d;
     recursive = true;
