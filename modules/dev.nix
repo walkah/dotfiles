@@ -3,6 +3,7 @@
 {
   home.packages = with pkgs; [
     # General
+    awscli2
     cmake
     drone-cli
 
