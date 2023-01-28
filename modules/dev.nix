@@ -6,6 +6,7 @@
     awscli2
     cmake
     drone-cli
+    pulumi-bin
 
     # Git
     git
