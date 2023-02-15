@@ -1,27 +1,6 @@
 { config, lib, pkgs, ... }:
 
 {
-  home.packages = with pkgs; [
-    # General
-    awscli2
-    cmake
-    drone-cli
-    pulumi-bin
-
-    # Git
-    git
-    gh
-    mr
-    tea
-
-    # Nix
-    cachix
-    niv
-    nixfmt
-    nixpkgs-fmt
-    rnix-lsp
-  ];
-
   home.file.".ghci".text = ''
     :set prompt "λ> "
   '';
@@ -33,5 +12,4 @@
     "$HOME/.go/bin"
     "$HOME/.local/bin"
   ];
-
 }

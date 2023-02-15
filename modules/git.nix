@@ -2,6 +2,13 @@
 
 {
   programs = {
+    gh = {
+      enable = true;
+      settings = {
+        git_protocol = "ssh";
+      };
+    };
+
     git = {
       enable = true;
       userName = "James Walker";
