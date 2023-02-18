@@ -23,6 +23,7 @@
               ];
             };
           };
+          packages.homeConfigurations = self.homeConfigurations.${system};
           packages.default =
             self.homeConfigurations.${system}.walkah.activationPackage;
         });
