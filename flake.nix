@@ -23,8 +23,17 @@
               ];
             };
           };
+
           packages.homeConfigurations = self.homeConfigurations.${system};
           packages.default =
             self.homeConfigurations.${system}.walkah.activationPackage;
+
+          devShells.default = pkgs.mkShell {
+            name = "dotfiles";
+            buildInputs = with pkgs; [
+              nil
+              nixpkgs-fmt
+            ];
+          };
         });
 }
