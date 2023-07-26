@@ -2,11 +2,18 @@ _:
 
 {
   programs = {
-    bat.enable = true;
+    bat = {
+      enable = true;
+      config = {
+        theme = "Dracula";
+      };
+    };
     btop.enable = true;
-    dircolors.enable = true;
     direnv.enable = true;
-    exa.enable = true;
+    exa = {
+      enable = true;
+      enableAliases = true;
+    };
     fzf = {
       enable = true;
       fileWidgetOptions = [ "--preview 'bat --color always {}'" ];
@@ -59,6 +66,11 @@ _:
         username = { format = "[$user]($style)@"; };
       };
     };
+  };
 
+  home = {
+    shellAliases = {
+      cat = "bat";
+    };
   };
 }
