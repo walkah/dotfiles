@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+_:
 
 {
   home.file.".ghci".text = ''

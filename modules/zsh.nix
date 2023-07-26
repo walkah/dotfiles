@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+_:
 
 {
   programs = {
@@ -19,6 +19,7 @@
       oh-my-zsh = {
         enable = true;
         plugins = [
+          "1password"
           "bundler"
           "direnv"
           "docker"
