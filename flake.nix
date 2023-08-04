@@ -31,9 +31,7 @@
             };
           };
 
-          packages.homeConfigurations = self.homeConfigurations.${system};
-          packages.default =
-            self.homeConfigurations.${system}.walkah.activationPackage;
+          packages.default = self.homeConfigurations.${system}.walkah.activationPackage;
 
           checks = {
             pre-commit-check = pre-commit-hooks.lib.${system}.run {
