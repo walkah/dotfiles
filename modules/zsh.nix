@@ -13,6 +13,8 @@ _:
     exa = {
       enable = true;
       enableAliases = true;
+      extraOptions = [ "--header" ];
+      git = true;
     };
     fzf = {
       enable = true;
