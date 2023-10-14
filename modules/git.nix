@@ -1,6 +1,9 @@
 _:
 
 {
+  # Allowed signers for git commit signing (referenced below).
+  home.file.".ssh/allowed_signers".text = "walkah@walkah.net ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOxgkaPcUYkMjk7SEBFrYpJ2mGK+8iPgLYwV+XpNp5Nl";
+
   programs = {
     gh = {
       enable = true;
@@ -22,15 +25,14 @@ _:
       };
 
       extraConfig = {
+        commit.gpgsign = true;
         github.user = "walkah";
+        gpg.format = "ssh";
+        gpg.ssh.allowedSignersFile = "~/.ssh/allowed_signers";
         init.defaultBranch = "main";
         pull.rebase = true;
         rebase.autoStash = true;
-      };
-
-      signing = {
-        key = "8896FEC44D47A81C";
-        signByDefault = true;
+        user.signingkey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOxgkaPcUYkMjk7SEBFrYpJ2mGK+8iPgLYwV+XpNp5Nl";
       };
     };
   };
