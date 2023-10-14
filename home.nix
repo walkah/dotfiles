@@ -4,8 +4,10 @@
 
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
-  home.username = "walkah";
-  home.homeDirectory = if pkgs.stdenv.isDarwin then "/Users/walkah" else "/home/walkah";
+  home = {
+    username = "walkah";
+    homeDirectory = if pkgs.stdenv.isDarwin then "/Users/walkah" else "/home/walkah";
+  };
 
   imports = [
     ./modules
