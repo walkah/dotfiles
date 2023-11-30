@@ -16,7 +16,7 @@
   programs = {
     emacs = {
       enable = true;
-      package = pkgs.emacs-nox;
+      package = pkgs.emacs29-nox;
       extraPackages = epkgs: [ epkgs.vterm ];
     };
   };
