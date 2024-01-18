@@ -37,7 +37,6 @@ _:
           "golang"
           "mix"
           "rails"
-          "ssh-agent"
           "tmux"
         ];
       };
