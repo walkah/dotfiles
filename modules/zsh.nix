@@ -12,7 +12,6 @@ _:
     direnv.enable = true;
     eza = {
       enable = true;
-      enableAliases = true;
       extraOptions = [ "--header" ];
       git = true;
     };
