@@ -49,10 +49,6 @@ _:
       enable = true;
       enableZshIntegration = true;
       settings = {
-        # TODO re-enable after https://github.com/starship/starship/issues/5350
-        battery = {
-          disabled = true;
-        };
         character = {
           success_symbol = "[»](bold green) ";
           error_symbol = "[✗](bold red) ";
