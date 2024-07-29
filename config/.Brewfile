@@ -1,45 +1,64 @@
 # ~/.Brewfile
 
 # taps
-tap 'homebrew/cask-drivers'
+tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
+tap 'homebrew/cask-versions'
+tap 'homebrew/services'
+tap '1password/tap'
 
 # brews
+brew 'bat'
 brew 'coreutils'
+brew 'direnv'
+brew 'eza'
+brew 'fzf'
 brew 'mas'
+brew 'zsh-autosuggestions'
 
 # casks
 cask '1password'
-cask 'alfred'
+cask '1password-cli'
+cask 'android-studio'
+cask 'beeper'
 cask 'brave-browser'
-cask 'dash'
+cask 'bunch'
+cask 'calibre'
 cask 'discord'
 cask 'docker'
+cask 'element'
 cask 'fantastical'
 cask 'figma'
-cask 'firefox'
+cask 'firefox@developer-edition'
 cask 'font-jetbrains-mono'
+cask 'font-jetbrains-mono-nerd-font'
 cask 'google-chrome'
 cask 'hazel'
 cask 'iterm2'
-cask 'keybase'
+cask 'logi-options-plus'
+cask 'logitech-camera-settings'
 cask 'microsoft-edge'
+cask 'microsoft-office'
+cask 'minecraft'
+cask 'obsidian'
+cask 'opal-composer'
+cask 'plexamp'
+cask 'raycast'
 cask 'slack'
 cask 'sonos'
 cask 'spotify'
 cask 'stats'
-cask 'syncthing'
+cask 'steam'
 cask 'synology-drive'
+cask 'todoist'
 cask 'visual-studio-code'
-cask 'zoomus'
+cask 'zoom'
 
 # mac app store
-mas 'Bumpr', id: 1166066070
-mas 'Day One', id: 1055511498
-mas 'Drafts', id: 1435957248
-mas 'Magnet', id: 441258766
-mas 'Parcel', id: 639968404
-mas 'Reeder', id: 1529448980
-mas 'Todoist', id: 585829637
-mas 'UlyssesMac', id: 1225570693
+mas 'OnePasswordSafari', id: 1569813296;
+mas 'Bumpr', id: 1166066070;
+mas 'DayOne', id: 1055511498;
+mas 'Drafts', id: 1435957248;
+mas 'HomeAssistant', id: 1099568401;
+mas 'Tailscale', id: 1475387142;
 mas 'Xcode', id: 497799835

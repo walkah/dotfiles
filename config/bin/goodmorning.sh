@@ -6,15 +6,8 @@ function install_latest() {
   asdf global $1 $version
 }
 
-echo "* Updating homesick..."
-homesick pull
-homesick symlink
-
 case "$OSTYPE" in 
   darwin*)
-    echo "* Restoring mackup..."
-    mackup restore
-    
     echo "* Homebrew updates..."
     brew bundle --global --no-lock
     brew upgrade
@@ -23,9 +16,7 @@ case "$OSTYPE" in
     mas upgrade
     ;;
   linux*)
-    sudo apt update && sudo apt upgrade
-    sudo snap refresh
-  
+    sudo apt update && sudo apt upgrade  
     ;;
 esac
 
@@ -40,7 +31,7 @@ asdf install
 for plugin in $(cat ~/.tool-versions | awk '{print $1}'); do install_latest $plugin; done
 
 echo "* Syncing repositories..."
-mr -j 5 update
+mr -j 8 update
 
 echo "* Upgrading oh-my-zsh..."
 cd ~/.oh-my-zsh

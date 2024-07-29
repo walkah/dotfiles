@@ -19,29 +19,7 @@ export ZSH_CUSTOM=$HOME/.zsh/custom
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(asdf direnv aws gcloud extract command-not-found tmux git github ssh-agent docker docker-compose mix)
-
-# ruby
-if [ -x ruby ]; then
-	plugins=($plugins ruby gem rails bundler heroku)
-fi
-
-# node
-plugins=($plugins npm yarn react-native)
-
-# python
-plugins=($plugins pip pipenv)
-
-# Platform specific settings
-case "$OSTYPE" in
-  darwin*)
-    plugins=($plugins osx)
-    ;;
-  linux*)
-    plugins=($plugins debian)
-    export PATH=/snap/bin:$PATH
-    ;;
-esac
+plugins=(1password bundler direnv docker docker-compose git golang mix rails tmux)
 
 # OH MY ZSH!
 source $ZSH/oh-my-zsh.sh
@@ -64,6 +42,14 @@ if [ $TERM = "screen" ]; then
   export DISABLE_AUTO_TITLE="true"
 fi
 export EDITOR="vim"
-export LSCOLORS="ExGxFxdxCxDxDxhbadExEx"
 
 eval "$(starship init zsh)"
+
+# Aliases
+alias -- 'cat'='bat'
+alias -- 'eza'='eza '\''--git'\'' '\''--header'\'''
+alias -- 'la'='eza -a'
+alias -- 'll'='eza -l'
+alias -- 'lla'='eza -la'
+alias -- 'ls'='eza'
+alias -- 'lt'='eza --tree'

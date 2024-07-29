@@ -18,8 +18,9 @@ _:
       userEmail = "walkah@walkah.net";
 
       aliases = {
-        lg =
-          "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit";
+        ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi";
+        lg = "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit";
+        smu = "submodule update --init --recursive";
         st = "status -s";
         undo = "reset HEAD~1 --mixed";
       };
