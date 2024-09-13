@@ -1,0 +1,6 @@
+export EDITOR="vim"
+export GOPATH="$HOME/.go"
+
+export PATH="$PATH${PATH:+:}$HOME/.cargo/bin:$HOME/.deno/bin:$HOME/.config/emacs/bin:$HOME/.go/bin:$HOME/.local/bin"
+
+
