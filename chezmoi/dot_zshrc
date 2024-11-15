@@ -18,6 +18,9 @@ plugins=(
   zsh-autosuggestions
 )
 
+# asdf config
+export ASDF_GOLANG_MOD_VERSION_ENABLED=true
+
 # eza plugin config
 zstyle ':omz:plugins:eza' 'git-status' yes
 zstyle ':omz:plugins:eza' 'header' yes
