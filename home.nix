@@ -1,29 +1,30 @@
-{ pkgs, ... }: {
-  # Let Home Manager install and manage itself.
+{ lib, pkgs, ... }: {
   programs.home-manager.enable = true;
 
-  # Home Manager needs a bit of information about you and the
-  # paths it should manage.
   home = {
     username = "walkah";
     homeDirectory = if pkgs.stdenv.isDarwin then "/Users/walkah" else "/home/walkah";
+    packages = with pkgs; [
+      chezmoi
+      bat
+      direnv
+      eza
+      fd
+      fzf
+      git
+      htop
+      jq
+      starship
+      tmux
+    ];
+
+    activation.chezmoi = lib.hm.dag.entryAfter [ "installPackages" ] ''
+      export PATH="${pkgs.git}/bin:$PATH"
+      if [ ! -d $HOME/.local/share/chezmoi ]; then
+        $DRY_RUN_CMD ${pkgs.chezmoi}/bin/chezmoi init --apply walkah/dotfiles
+      fi
+    '';
+
+    stateVersion = "24.05";
   };
-
-  imports = [
-    ./modules
-  ];
-
-  programs = {
-    vim = { enable = true; };
-  };
-
-  # This value determines the Home Manager release that your
-  # configuration is compatible with. This helps avoid breakage
-  # when a new Home Manager release introduces backwards
-  # incompatible changes.
-  #
-  # You can update Home Manager without changing this value. See
-  # the Home Manager release notes for a list of state version
-  # changes in each release.
-  home.stateVersion = "23.05";
 }
