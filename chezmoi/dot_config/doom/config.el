@@ -62,7 +62,6 @@
 (setq lsp-haskell-formatting-provider "stylish-haskell")
 
 ;; nix-mode
-(setq nix-nixfmt-bin "nixpkgs-fmt")
 (with-eval-after-load 'lsp-mode
   (lsp-register-client
    (make-lsp-client :new-connection (lsp-stdio-connection "nixd")
@@ -72,7 +71,3 @@
 
 ;; web-mode
 (add-to-list 'auto-mode-alist '("\\.njk" . web-mode))
-
-;; TODO: remove when macport updates.
-;; see: https://discourse.doomemacs.org/t/how-to-have-tool-bar-mode-0-apply-at-startup-to-avoid-large-title-bar-on-macos-sonoma-when-using-railwaycat-homebrew-emacsmacport/4222/4
-(add-hook 'doom-after-init-hook (lambda () (tool-bar-mode 1) (tool-bar-mode 0)))
