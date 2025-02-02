@@ -26,4 +26,4 @@ cursor-color = f8f8f2
 selection-background = 44475a
 selection-foreground = f8f8f2
 
-keybind = global:ctrl+grave_accent=toggle_quick_terminal
+keybind = global:ctrl+escape=toggle_quick_terminal
