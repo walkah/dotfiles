@@ -36,3 +36,7 @@ eval "$(starship init zsh)"
 if command -v bat &> /dev/null; then
  alias -- cat=bat
 fi
+
+if [[ -n $GHOSTTY_RESOURCES_DIR ]]; then
+  source "$GHOSTTY_RESOURCES_DIR"/shell-integration/zsh/ghostty-integration
+fi
