@@ -5,11 +5,21 @@
 	smu = "submodule update --init --recursive"
 	ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
 	up = "pull --rebase --autostash"
-  cleanup = "!git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n 1 git branch -d"
-
+	cleanup = "!git branch -vv|grep ': gone]'|awk '{print $1}'|xargs git branch -D"
 
 [commit]
 	gpgsign = true
+
+[diff]
+        algorithm = histogram
+        colorMoved = plain
+        mnemonicPrefix = true
+        renames = true
+
+[fetch]
+        prune = true
+        pruneTags = true
+        all = true
 
 [github]
 	user = "walkah"
@@ -25,6 +35,11 @@
 
 [pull]
 	rebase = true
+
+[push]
+        default = simple
+        autoSetupRemote = true
+        followTags = true
 
 [rebase]
 	autoStash = true
