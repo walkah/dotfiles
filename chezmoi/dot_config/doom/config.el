@@ -30,9 +30,9 @@
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-(setq deft-directory "~/Sync/Notes"
-      deft-default-extension "md"
-      deft-recursive t)
+;; (setq deft-directory "~/Sync/Notes"
+;; deft-default-extension "md"
+;; deft-recursive t)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -68,6 +68,14 @@
                     :major-modes '(nix-mode)
                     :priority 0
                     :server-id 'nixd)))
+
+;; obsidian
+(use-package obsidian
+  :config
+  (global-obsidian-mode t)
+  :custom
+  (obsidian-directory "~/Documents/Notes")
+  (markdown-enable-wiki-links t))
 
 ;; web-mode
 (add-to-list 'auto-mode-alist '("\\.njk" . web-mode))
