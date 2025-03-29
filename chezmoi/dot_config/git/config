@@ -11,15 +11,15 @@
 	gpgsign = true
 
 [diff]
-        algorithm = histogram
-        colorMoved = plain
-        mnemonicPrefix = true
-        renames = true
+	algorithm = histogram
+	colorMoved = plain
+	mnemonicPrefix = true
+	renames = true
 
 [fetch]
-        prune = true
-        pruneTags = true
-        all = true
+	prune = true
+	pruneTags = true
+	all = true
 
 [github]
 	user = "walkah"
@@ -37,9 +37,9 @@
 	rebase = true
 
 [push]
-        default = simple
-        autoSetupRemote = true
-        followTags = true
+	default = simple
+	autoSetupRemote = true
+	followTags = true
 
 [rebase]
 	autoStash = true
