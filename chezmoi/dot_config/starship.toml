@@ -13,5 +13,8 @@ disabled=true
 ssh_only = false
 format = "[$hostname]($style):"
 
+[kubernetes]
+disabled = false
+
 [username]
 format = "[$user]($style)@"
