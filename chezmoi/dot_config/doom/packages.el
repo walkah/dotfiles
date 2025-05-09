@@ -8,7 +8,6 @@
 ;; To install SOME-PACKAGE from MELPA, ELPA or emacsmirror:
 ;; (package! some-package)
 
-(package! ellama)
 (package! obsidian)
 (package! wakatime-mode)
 

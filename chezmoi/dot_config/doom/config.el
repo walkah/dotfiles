@@ -61,6 +61,12 @@
 ;; haskell
 (setq lsp-haskell-formatting-provider "stylish-haskell")
 
+;; llm
+(gptel-make-ollama "Ollama"
+  :host "localhost:11434"
+  :stream t
+  :models '(mistral:latest))
+
 ;; nix-mode
 (with-eval-after-load 'lsp-mode
   (lsp-register-client
