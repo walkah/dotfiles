@@ -16,6 +16,7 @@ plugins=(
   github
   mix
   python
+  thefuck
   tmux
   zsh-autosuggestions
 )
