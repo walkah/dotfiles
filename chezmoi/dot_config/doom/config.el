@@ -80,7 +80,7 @@
   :config
   (global-obsidian-mode t)
   :custom
-  (obsidian-directory "~/Documents/Notes")
+  (obsidian-directory "~/Developer/Notes")
   (markdown-enable-wiki-links t))
 
 ;; web-mode
