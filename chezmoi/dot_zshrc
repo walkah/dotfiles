@@ -12,8 +12,8 @@ plugins=(
   eza
   extract
   gcloud
+  gh
   git
-  github
   mix
   python
   tmux
