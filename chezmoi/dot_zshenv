@@ -1,6 +1,8 @@
 export EDITOR="vim"
 export GOPATH="$HOME/.go"
 
+export NH_SHOW_ACTIVATION_LOGS=1
+
 export PATH="$PATH${PATH:+:}$HOME/.cargo/bin:$HOME/.deno/bin:$HOME/.config/emacs/bin:$HOME/.go/bin:$HOME/.local/bin"
 
 
